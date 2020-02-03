@@ -1,0 +1,59 @@
+.nav {
+  position: relative;
+  margin: 1rem 0;
+  height: auto;
+
+  &__ul {
+    grid-column: 2/14;
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and (min-width: $tp-kicsi) {
+      justify-content: end;
+    }
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 3/13;
+    }
+    @media only screen and (min-width: $tp-orias) {
+      grid-column: 4/12;
+    }
+    li {
+      cursor: pointer;
+      font-weight: 700;
+
+      @media only screen and (min-width: $tp-kicsi) {
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      @media only screen and (min-width: $tp-nagy) {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+      &:hover {
+        color: $szin-03;
+      }
+    }
+  }
+  p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    //Logo a különböző felbontásoknál
+    @media only screen and (min-width: $tp-kicsi) {
+      display: block;
+      left: 7vw;
+    }
+    @media only screen and (min-width: $tp-kozepes) {
+      left: 13vw;
+    }
+    @media only screen and (min-width: $tp-nagy) {
+      left: 15vw;
+    }
+    @media only screen and (min-width: $tp-orias) {
+      left: 20vw;
+    }
+  }
+}

@@ -213,8 +213,8 @@ button {
 // Az alap grid
 .grid {
   display: grid;
-  grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(
-      2rem,
+  grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(
+      1rem,
       1fr
     );
   grid-template-rows: auto;
@@ -222,23 +222,23 @@ button {
 
   @media screen and (min-width: $tp-kicsi) {
     grid-template-columns:
-      minmax(4rem, 1fr) repeat(8, minmax(min-content, 12rem))
-      minmax(4rem, 1fr);
+      minmax(2rem, 1fr) repeat(12, minmax(min-content, 8rem))
+      minmax(2rem, 1fr);
   }
   @media screen and (min-width: $tp-kozepes) {
     grid-template-columns:
-      minmax(6rem, 1fr) repeat(8, minmax(min-content, 12rem))
-      minmax(6rem, 1fr);
+      minmax(4rem, 1fr) repeat(12, minmax(min-content, 8rem))
+      minmax(4rem, 1fr);
   }
   @media screen and (min-width: $tp-nagy) {
     grid-template-columns:
-      minmax(8rem, 1fr) repeat(8, minmax(min-content, 12rem))
-      minmax(8rem, 1fr);
+      minmax(6rem, 1fr) repeat(12, minmax(min-content, 8rem))
+      minmax(6rem, 1fr);
   }
   @media screen and (min-width: $tp-orias) {
     grid-template-columns:
-      minmax(10rem, 1fr) repeat(8, minmax(min-content, 12rem))
-      minmax(10rem, 1fr);
+      minmax(8rem, 1fr) repeat(12, minmax(min-content, 8rem))
+      minmax(8rem, 1fr);
   }
 
   //overflow-y: scroll; // előcsaltam a scroll sávját függőleges irányba
