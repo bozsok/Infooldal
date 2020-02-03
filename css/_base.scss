@@ -1,0 +1,246 @@
+//Színek
+$szin-01: #fdc100;
+$szin-02: #f18a00;
+$szin-03: #ed7962;
+$szin-04: #d64c49;
+$szin-05: #a5c86a;
+$szin-06: #4b9074;
+$szin-07: #284d3b;
+$szin-08: #e2e8f6;
+$szin-09: #c0ceeb;
+$szin-10: #a0b2da;
+$szin-11: #d68651;
+$szin-12: #b46b42;
+$szin-13: #5a6086;
+$szin-14: #111538;
+$szin-15: #060725;
+$szin-16: #6f85b4;
+
+// Font
+$betu-elsodleges: "Roboto", sans-serif;
+
+//Töréspontok
+$tp-orias: 112.5rem; //1800px -> 1800 / 16 = 112.5
+$tp-nagy: 75em; //1200px -> 1200 / 16 = 75
+$tp-kozepes: 56.25em; // 900 / 16 = 56.25
+$tp-kicsi: 37.5em; //600 / 16 = 37.5
+
+//Módosítók
+.kozepre {
+  text-align: center;
+}
+.jobbra {
+  text-align: right;
+}
+.alapBetu {
+  font-weight: 400;
+}
+.vekonyBetu {
+  font-weight: 300;
+}
+.vastagBetu {
+  font-weight: 700;
+}
+.nagyBetu {
+  text-transform: uppercase;
+}
+
+//Alap beállítások
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(0.75em + 1vmin);
+}
+
+body {
+  font-family: $betu-elsodleges;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $szin-13;
+}
+//Listaelemek
+ul {
+  list-style-type: none;
+
+  li {
+    width: max-content;
+  }
+}
+ol {
+  margin-left: 1rem;
+}
+//Kiemelés
+span {
+  font-weight: 700;
+}
+//Link
+a {
+  cursor: pointer;
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $szin-03;
+  }
+}
+//Kép
+img {
+  width: 100%;
+  height: auto;
+}
+//SVG
+svg {
+  fill: $szin-10;
+  height: 5rem;
+  @media only screen and (min-width: $tp-kicsi) {
+    height: 6rem;
+  }
+  @media only screen and (min-width: $tp-kozepes) {
+    height: 7rem;
+  }
+  @media only screen and (min-width: $tp-nagy) {
+    height: 8rem;
+  }
+  @media only screen and (min-width: $tp-orias) {
+    height: 9rem;
+  }
+}
+//Form és rajta lévő elemek
+form {
+  margin: 2rem 0 7rem 0;
+  background-color: $szin-08;
+
+  @media only screen and (min-width: $tp-kicsi) {
+    margin-bottom: 8rem;
+  }
+  @media only screen and (min-width: $tp-kozepes) {
+    margin-bottom: 11rem;
+  }
+  @media only screen and (min-width: $tp-nagy) {
+    margin-bottom: 14rem;
+  }
+  @media only screen and (min-width: $tp-orias) {
+    margin-bottom: 17rem;
+  }
+}
+//Általános beviteli mező
+input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 0.6rem 3rem;
+  color: $szin-02;
+  font-size: calc(0.75em + 1vmin);
+}
+//Küldés gomb
+input[type="submit"] {
+  width: min-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: $szin-04;
+  color: $szin-05;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    $szin-10 50%
+  );
+  background-size: 220%;
+  transition: all 0.4s;
+
+  &:hover {
+    background-position: 100%;
+  }
+}
+//többsoros beviteli mező
+textarea {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  outline: 0;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 3rem;
+  font-size: calc(0.75em + 1vmin);
+  color: $szin-06;
+  font-family: $betu-elsodleges;
+}
+select {
+  margin-bottom: 1rem;
+}
+option {
+  width: 100%;
+}
+label {
+  //semmi egyenlőre
+}
+//Általános gomb, pl. navigációnál, az oldalon nagyobb padding-gel kell!
+button {
+  width: max-content;
+  cursor: pointer;
+  padding: 0.5rem 2.5rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3rem;
+  background-color: $szin-07;
+  font-family: $betu-elsodleges;
+  font-size: calc(0.75em + 1vmin);
+  color: $szin-08;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    $szin-09 50%
+  );
+  background-size: 220%;
+  outline: none;
+  transition: all 0.4s;
+
+  &:hover {
+    background-position: 100%;
+  }
+}
+// Az alap grid
+.grid {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(
+      2rem,
+      1fr
+    );
+  grid-template-rows: auto;
+  grid-column-gap: 1vw;
+
+  @media screen and (min-width: $tp-kicsi) {
+    grid-template-columns:
+      minmax(4rem, 1fr) repeat(8, minmax(min-content, 12rem))
+      minmax(4rem, 1fr);
+  }
+  @media screen and (min-width: $tp-kozepes) {
+    grid-template-columns:
+      minmax(6rem, 1fr) repeat(8, minmax(min-content, 12rem))
+      minmax(6rem, 1fr);
+  }
+  @media screen and (min-width: $tp-nagy) {
+    grid-template-columns:
+      minmax(8rem, 1fr) repeat(8, minmax(min-content, 12rem))
+      minmax(8rem, 1fr);
+  }
+  @media screen and (min-width: $tp-orias) {
+    grid-template-columns:
+      minmax(10rem, 1fr) repeat(8, minmax(min-content, 12rem))
+      minmax(10rem, 1fr);
+  }
+
+  //overflow-y: scroll; // előcsaltam a scroll sávját függőleges irányba
+  //scroll-behavior: smooth; // ezzel gördülést szimulál, mintha scroll-oznánk az oldalt
+}

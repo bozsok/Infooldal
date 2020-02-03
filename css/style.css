@@ -1,0 +1,254 @@
+.kozepre {
+  text-align: center;
+}
+
+.jobbra {
+  text-align: right;
+}
+
+.alapBetu {
+  font-weight: 400;
+}
+
+.vekonyBetu {
+  font-weight: 300;
+}
+
+.vastagBetu {
+  font-weight: 700;
+}
+
+.nagyBetu {
+  text-transform: uppercase;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: calc(0.75em + 1vmin);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #5a6086;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+ol {
+  margin-left: 1rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  cursor: pointer;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #ed7962;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: #a0b2da;
+  height: 5rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  svg {
+    height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  svg {
+    height: 7rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  svg {
+    height: 8rem;
+  }
+}
+
+@media only screen and (min-width: 112.5rem) {
+  svg {
+    height: 9rem;
+  }
+}
+
+form {
+  margin: 2rem 0 7rem 0;
+  background-color: #e2e8f6;
+}
+
+@media only screen and (min-width: 37.5em) {
+  form {
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  form {
+    margin-bottom: 11rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  form {
+    margin-bottom: 14rem;
+  }
+}
+
+@media only screen and (min-width: 112.5rem) {
+  form {
+    margin-bottom: 17rem;
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 0.6rem 3rem;
+  color: #f18a00;
+  font-size: calc(0.75em + 1vmin);
+}
+
+input[type="submit"] {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #d64c49;
+  color: #a5c86a;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #a0b2da 50%);
+  background-size: 220%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-position: 100%;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  outline: 0;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 3rem;
+  font-size: calc(0.75em + 1vmin);
+  color: #4b9074;
+  font-family: "Roboto", sans-serif;
+}
+
+select {
+  margin-bottom: 1rem;
+}
+
+option {
+  width: 100%;
+}
+
+button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  padding: 0.5rem 2.5rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3rem;
+  background-color: #284d3b;
+  font-family: "Roboto", sans-serif;
+  font-size: calc(0.75em + 1vmin);
+  color: #e2e8f6;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #c0ceeb 50%);
+  background-size: 220%;
+  outline: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button:hover {
+  background-position: 100%;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(2rem, 1fr) (minmax(min-content, 12rem))[8] minmax(2rem, 1fr);
+      grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(-webkit-min-content, 12rem)) minmax(2rem, 1fr);
+      grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(2rem, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-column-gap: 1vw;
+}
+
+@media screen and (min-width: 37.5em) {
+  .grid {
+    -ms-grid-columns: minmax(4rem, 1fr) (minmax(min-content, 12rem))[8] minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) repeat(8, minmax(-webkit-min-content, 12rem)) minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(4rem, 1fr);
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  .grid {
+    -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 12rem))[8] minmax(6rem, 1fr);
+        grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(-webkit-min-content, 12rem)) minmax(6rem, 1fr);
+        grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(6rem, 1fr);
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .grid {
+    -ms-grid-columns: minmax(8rem, 1fr) (minmax(min-content, 12rem))[8] minmax(8rem, 1fr);
+        grid-template-columns: minmax(8rem, 1fr) repeat(8, minmax(-webkit-min-content, 12rem)) minmax(8rem, 1fr);
+        grid-template-columns: minmax(8rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(8rem, 1fr);
+  }
+}
+
+@media screen and (min-width: 112.5rem) {
+  .grid {
+    -ms-grid-columns: minmax(10rem, 1fr) (minmax(min-content, 12rem))[8] minmax(10rem, 1fr);
+        grid-template-columns: minmax(10rem, 1fr) repeat(8, minmax(-webkit-min-content, 12rem)) minmax(10rem, 1fr);
+        grid-template-columns: minmax(10rem, 1fr) repeat(8, minmax(min-content, 12rem)) minmax(10rem, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */
