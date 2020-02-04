@@ -3,18 +3,19 @@ $szin-01: #fdc100;
 $szin-02: #f18a00;
 $szin-03: #ed7962;
 $szin-04: #d64c49;
-$szin-05: #a5c86a;
-$szin-06: #4b9074;
-$szin-07: #284d3b;
-$szin-08: #e2e8f6;
-$szin-09: #c0ceeb;
-$szin-10: #a0b2da;
-$szin-11: #d68651;
-$szin-12: #b46b42;
-$szin-13: #5a6086;
-$szin-14: #111538;
-$szin-15: #060725;
-$szin-16: #6f85b4;
+$szin-05: #e2e8f6;
+$szin-06: #c0ceeb;
+$szin-07: #a0b2da;
+$szin-08: #6f85b4;
+$szin-09: #5a6086;
+$szin-10: #111538;
+$szin-11: #060725;
+$szin-12: #d68651;
+$szin-13: #b46b42;
+$szin-14: #a5c86a;
+$szin-15: #4b9074;
+$szin-16: #284d3b;
+$feher-szin: #fff;
 
 // Font
 $betu-elsodleges: "Roboto", sans-serif;
@@ -44,7 +45,9 @@ $tp-kicsi: 37.5em; //600 / 16 = 37.5
 .nagyBetu {
   text-transform: uppercase;
 }
-
+.oriasBetu {
+  font-size: calc(22px + (45 - 24) * ((100vw - 200px) / (1920 - 200)));
+}
 //Alap beállítások
 *,
 *::after,
@@ -55,23 +58,29 @@ $tp-kicsi: 37.5em; //600 / 16 = 37.5
 }
 
 html {
-  box-sizing: border-box;  
+  box-sizing: border-box;
   font-size: 62.5%; // Browser default font-size: 16px -> 10px/16px = 62.5% -> 1rem = 10px
   //Azért kell, hogy a grid mérettel könnyen tudjak számolni (1re = 10px).
 }
 
 body {
+  position: relative;
   font-family: $betu-elsodleges;
-  font-weight: 400;
-  line-height: 1.6;
-  color: $szin-13;
+  color: $szin-10;
   font-size: calc(1em + 1vmin); //Betűméret nővelése + reszponzivitása.
+}
+h1 {  
+  line-height: 1.3;
+}
+p {
+  line-height: 1.4;
 }
 //Listaelemek
 ul {
   list-style-type: none;
 
   li {
+    color: $szin-09;
     width: max-content;
   }
 }
@@ -99,7 +108,7 @@ img {
 }
 //SVG
 svg {
-  fill: $szin-10;
+  //fill: $szin-10;
   height: 5rem;
   @media only screen and (min-width: $tp-kicsi) {
     height: 6rem;
@@ -141,7 +150,7 @@ input {
   border: none;
   border-radius: 3rem;
   padding: 0.6rem 3rem;
-  color: $szin-02;
+  color: $szin-05;
   font-size: calc(0.75em + 1vmin);
 }
 //Küldés gomb
@@ -149,19 +158,12 @@ input[type="submit"] {
   width: min-content;
   cursor: pointer;
   text-transform: uppercase;
-  background-color: $szin-04;
-  color: $szin-05;
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    $szin-10 50%
-  );
-  background-size: 220%;
+  background-color: $szin-08;
+  color: $szin-05;  
   transition: all 0.4s;
 
   &:hover {
-    background-position: 100%;
+    background-color: $szin-10;
   }
 }
 //többsoros beviteli mező
@@ -190,26 +192,20 @@ label {
 button {
   width: max-content;
   cursor: pointer;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5em 2em;
   text-transform: uppercase;
   border: none;
   border-radius: 3rem;
-  background-color: $szin-07;
+  background-color: $szin-01;
   font-family: $betu-elsodleges;
-  font-size: calc(0.75em + 1vmin);
-  color: $szin-08;
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    $szin-09 50%
-  );
-  background-size: 220%;
+  font-size: calc(12px + (18 - 12) * ((100vw - 200px) / (1920 - 200)));
+  line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
+  color: $feher-szin;  
   outline: none;
   transition: all 0.4s;
 
   &:hover {
-    background-position: 100%;
+    background-color: $szin-02;
   }
 }
 // Az alap grid
@@ -245,4 +241,21 @@ button {
 
   //overflow-y: scroll; // előcsaltam a scroll sávját függőleges irányba
   //scroll-behavior: smooth; // ezzel gördülést szimulál, mintha scroll-oznánk az oldalt
+}
+
+#visszaNyil {
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  color: $szin-15;
+  font-size: 4rem;
+  z-index: 2;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+
+  @media only screen and (max-width: 768px) {
+    bottom: 4rem;
+    right: 2rem;
+  }
 }
