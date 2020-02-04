@@ -5,6 +5,8 @@
 
   &__ul {
     grid-column: 2/14;
+    grid-row: 1;
+
     display: flex;
     justify-content: space-around;
 
@@ -12,10 +14,10 @@
       justify-content: end;
     }
     @media only screen and (min-width: $tp-kozepes) {
-      grid-column: 3/13;
+      //grid-column: 3/13;
     }
     @media only screen and (min-width: $tp-orias) {
-      grid-column: 4/12;
+      //grid-column: 4/12;
     }
     li {
       cursor: pointer;
@@ -23,12 +25,17 @@
 
       @media only screen and (min-width: $tp-kicsi) {
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: 2rem;
+        }
+      }
+      @media only screen and (min-width: $tp-kozepes) {
+        &:not(:last-child) {
+          margin-right: 3rem;
         }
       }
       @media only screen and (min-width: $tp-nagy) {
         &:not(:last-child) {
-          margin-right: 2rem;
+          margin-right: 4rem;
         }
       }
       &:hover {
@@ -37,23 +44,12 @@
     }
   }
   p {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: none;
-    //Logo a különböző felbontásoknál
+    grid-column: 2/14;
+    grid-row: 1;
+    //Logo megjelenítése 600px-nél
     @media only screen and (min-width: $tp-kicsi) {
       display: block;
-      left: 7vw;
-    }
-    @media only screen and (min-width: $tp-kozepes) {
-      left: 13vw;
-    }
-    @media only screen and (min-width: $tp-nagy) {
-      left: 15vw;
-    }
-    @media only screen and (min-width: $tp-orias) {
-      left: 20vw;
     }
   }
 }

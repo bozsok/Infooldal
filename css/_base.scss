@@ -55,8 +55,9 @@ $tp-kicsi: 37.5em; //600 / 16 = 37.5
 }
 
 html {
-  box-sizing: border-box;
-  font-size: calc(0.75em + 1vmin);
+  box-sizing: border-box;  
+  font-size: 62.5%; // Browser default font-size: 16px -> 10px/16px = 62.5% -> 1rem = 10px
+  //Azért kell, hogy a grid mérettel könnyen tudjak számolni (1re = 10px).
 }
 
 body {
@@ -64,6 +65,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: $szin-13;
+  font-size: calc(1em + 1vmin); //Betűméret nővelése + reszponzivitása.
 }
 //Listaelemek
 ul {
@@ -222,23 +224,23 @@ button {
 
   @media screen and (min-width: $tp-kicsi) {
     grid-template-columns:
-      minmax(2rem, 1fr) repeat(12, minmax(min-content, 8rem))
-      minmax(2rem, 1fr);
-  }
-  @media screen and (min-width: $tp-kozepes) {
-    grid-template-columns:
       minmax(4rem, 1fr) repeat(12, minmax(min-content, 8rem))
       minmax(4rem, 1fr);
   }
-  @media screen and (min-width: $tp-nagy) {
+  @media screen and (min-width: $tp-kozepes) {
     grid-template-columns:
       minmax(6rem, 1fr) repeat(12, minmax(min-content, 8rem))
       minmax(6rem, 1fr);
   }
-  @media screen and (min-width: $tp-orias) {
+  @media screen and (min-width: $tp-nagy) {
     grid-template-columns:
       minmax(8rem, 1fr) repeat(12, minmax(min-content, 8rem))
       minmax(8rem, 1fr);
+  }
+  @media screen and (min-width: $tp-orias) {
+    grid-template-columns:
+      minmax(10rem, 1fr) repeat(12, minmax(min-content, 8rem))
+      minmax(10rem, 1fr);
   }
 
   //overflow-y: scroll; // előcsaltam a scroll sávját függőleges irányba
