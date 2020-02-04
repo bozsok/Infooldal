@@ -76,6 +76,9 @@
     @media only screen and (min-width: $tp-kozepes) {
       grid-column: 2/6
     }
+    @media only screen and (min-width: $tp-orias) {
+      grid-column: 2/7
+    }
 
       &:hover {
         background-color: $szin-08;

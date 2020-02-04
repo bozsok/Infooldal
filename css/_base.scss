@@ -61,19 +61,21 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // Browser default font-size: 16px -> 10px/16px = 62.5% -> 1rem = 10px
   //Azért kell, hogy a grid mérettel könnyen tudjak számolni (1re = 10px).
+  scroll-behavior: smooth;
 }
 
 body {
   position: relative;
   font-family: $betu-elsodleges;
   color: $szin-10;
-  font-size: calc(1em + 1vmin); //Betűméret nővelése + reszponzivitása.
+  font-size: calc(1em + 1vmin); //Betűméret nővelése + reszponzivitása. - Nem biztos, hogy beválik!
 }
 h1 {  
   line-height: 1.3;
 }
 p {
-  line-height: 1.4;
+  font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
+  line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
 }
 //Listaelemek
 ul {

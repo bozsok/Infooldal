@@ -1,0 +1,33 @@
+.section_02 {
+    height: auto;
+    background-color: $szin-09;
+    color: $feher-szin;
+
+    h3 {
+        margin-top: 3rem;
+        @media only screen and (min-width: $tp-kozepes) {
+            margin-top: 4rem;
+        }
+    }
+    h3, p {
+        grid-column: 2/14;
+        justify-self: center;
+        align-self: center;        
+        font-family: "Amatic SC", cursive;
+        font-size: calc(14px + (40 - 14) * ((100vw - 200px) / (1920 - 200)));        
+    }
+    p {
+        grid-column: 10/13;
+        justify-self: self-start; 
+        margin: 1rem 0 2rem 0;
+        font-size: calc(12px + (20 - 12) * ((100vw - 200px) / (1920 - 200)));
+
+        @media only screen and (min-width: $tp-kicsi) {
+            grid-column: 11/13;
+        }
+        
+        @media only screen and (min-width: $tp-kozepes) {
+            margin-bottom: 4rem;
+        }
+    }
+}
