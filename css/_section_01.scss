@@ -68,16 +68,10 @@
     &:last-child {
       background-color: $szin-07;      
 
-      @media only screen and (min-width: $tp-kicsi) {
-      grid-column: 2/7;
+      @media only screen and (min-width: $tp-kicsi) {     
       grid-row: 3/4;
-      justify-self: self-end;
-    }
-    @media only screen and (min-width: $tp-kozepes) {
-      grid-column: 2/6
-    }
-    @media only screen and (min-width: $tp-orias) {
-      grid-column: 2/7
+      justify-self: center;
+      margin-left: 8rem;
     }
 
       &:hover {

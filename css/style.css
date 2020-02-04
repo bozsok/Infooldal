@@ -83,7 +83,7 @@ a {
 
 a, a:link, a:visited {
   text-decoration: none;
-  color: #ed7962;
+  color: #fff;
 }
 
 img {
@@ -468,30 +468,12 @@ button:hover {
 
 @media only screen and (min-width: 37.5em) {
   .section_01 button:last-child {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 5;
-    grid-column: 2/7;
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
-    -ms-grid-column-align: self-end;
-        justify-self: self-end;
-  }
-}
-
-@media only screen and (min-width: 56.25em) {
-  .section_01 button:last-child {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
-    grid-column: 2/6;
-  }
-}
-
-@media only screen and (min-width: 112.5rem) {
-  .section_01 button:last-child {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 5;
-    grid-column: 2/7;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-left: 8rem;
   }
 }
 
@@ -549,6 +531,191 @@ button:hover {
 @media only screen and (min-width: 56.25em) {
   .section_02 p {
     margin-bottom: 4rem;
+  }
+}
+
+.section_03 {
+  height: auto;
+  background-color: #f6f6f8;
+  text-align: center;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_03 {
+    background-image: url(../img/section-04_hatterkep.png);
+    background-position: 28%;
+    background-size: cover;
+    text-align: left;
+  }
+}
+
+.section_03 h1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  margin-top: 5vh;
+  color: #5a6086;
+}
+
+.section_03 p {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  margin-top: 3rem;
+  color: #6f85b4;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .section_03 p {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_03 p {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 11;
+    grid-column: 2/13;
+  }
+}
+
+.section_03 p span {
+  color: #5a6086;
+}
+
+.section_03 .jellemzo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  margin: 1rem 0;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7rem 1fr;
+      grid-template-columns: 7rem 1fr;
+}
+
+.section_03 .jellemzo:nth-child(3) {
+  margin-top: 5rem;
+}
+
+.section_03 .jellemzo:nth-child(6) {
+  margin-bottom: 5rem;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .section_03 .jellemzo:nth-child(3) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2/6;
+  }
+  .section_03 .jellemzo:nth-child(4) {
+    margin-top: 5rem;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 4;
+    grid-column: 6/10;
+  }
+  .section_03 .jellemzo:nth-child(5) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2/6;
+    margin-bottom: 5rem;
+  }
+  .section_03 .jellemzo:nth-child(6) {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 4;
+    grid-column: 6/10;
+  }
+}
+
+@media only screen and (min-width: 112.5rem) {
+  .section_03 .jellemzo:nth-child(3) {
+    margin-bottom: 3rem;
+  }
+  .section_03 .jellemzo:nth-child(4) {
+    margin-bottom: 3rem;
+  }
+}
+
+.section_03 .jellemzo i {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  font-size: 3rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #ed7962;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_03 .jellemzo i {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_03 .jellemzo i {
+    font-size: 5rem;
+  }
+}
+
+.section_03 .jellemzo h3 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  margin-bottom: 0.5rem;
+  color: #5a6086;
+  text-align: left;
+}
+
+.section_03 .jellemzo p {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  margin: 0;
+  color: #a0b2da;
+  text-align: left;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .section_03 .jellemzo p {
+    min-height: 6rem;
+  }
+}
+
+.section_03 button {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-bottom: 4rem;
+  font-weight: 700;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_03 button {
+    -ms-grid-column-align: self-start;
+        justify-self: self-start;
   }
 }
 /*# sourceMappingURL=style.css.map */
