@@ -1,0 +1,90 @@
+.section_01 {
+  min-height: 60rem;
+  height: 100vh;
+  position: relative;
+
+  .cimNyil {
+    position: absolute;
+    margin-top: 2rem;    
+
+    a {
+      grid-column: 2/3;
+      font-size: 3rem;
+      color: $szin-01;      
+    }
+    h1 {
+      grid-column: 3/14;
+      color: $feher-szin;
+
+      span {
+        color: $szin-04;
+      }
+    }
+  }
+
+  .iker {
+    min-height: 28rem;
+    height: 50%;
+    width: 100%;
+    align-content: center;
+    overflow: hidden;
+
+    h1 {
+      position: initial;
+      transform: initial;
+      grid-column: 3/8;
+      grid-row: 2/3;
+      margin: 3rem 0 2rem;
+    }
+    p {
+      grid-column: 3/9;
+      grid-row: 3/4;
+      margin: 1rem 0;
+      color: $feher-szin;
+      z-index: 2;
+      @media only screen and (min-width: $tp-kicsi) {
+        grid-column: 3/8;
+      }
+    }
+    button {
+      grid-column: 3/14;
+      grid-row: 4/5;
+      margin: 2rem 0;
+      //height: 3.5rem;
+      font-weight: 700;
+    }
+    img {
+      grid-column: 8/-1;
+      grid-row: 1/6;
+      justify-self: self-start;
+      align-self: flex-end;
+      width: 22rem;
+
+      @media only screen and (min-width: $tp-kicsi) {
+        width: 30rem;
+      }
+    }
+  }
+
+  .iker-1 {
+    background-image: $kek-szinatmenet;
+
+    h1 {
+      color: $szin-14;
+    }
+  }
+
+  .iker-2 {
+    background-image: $rozsaszin-szinatmenet;
+
+    h1 {
+      color: $szin-04;
+    }
+    button {
+      background-color: $szin-14;
+      &:hover {
+        background-color: $szin-15;
+      }
+    }
+  }
+}

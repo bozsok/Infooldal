@@ -1,0 +1,410 @@
+.kozepre {
+  text-align: center;
+}
+
+.jobbra {
+  text-align: right;
+}
+
+.alapBetu {
+  font-weight: 400;
+}
+
+.vekonyBetu {
+  font-weight: 300;
+}
+
+.vastagBetu {
+  font-weight: 700;
+}
+
+.nagyBetu {
+  text-transform: uppercase;
+}
+
+.oriasBetu {
+  font-size: calc(22px + (45 - 24) * ((100vw - 200px) / (1920 - 200)));
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #111538;
+  font-size: calc(1em + 1vmin);
+}
+
+h1 {
+  line-height: 1.3;
+}
+
+p {
+  line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  color: #5a6086;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+ol {
+  margin-left: 1rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  cursor: pointer;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  height: 5rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  svg {
+    height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  svg {
+    height: 7rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  svg {
+    height: 8rem;
+  }
+}
+
+@media only screen and (min-width: 112.5rem) {
+  svg {
+    height: 9rem;
+  }
+}
+
+form {
+  margin: 2rem 0 7rem 0;
+  background-color: #6f85b4;
+}
+
+@media only screen and (min-width: 37.5em) {
+  form {
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  form {
+    margin-bottom: 11rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  form {
+    margin-bottom: 14rem;
+  }
+}
+
+@media only screen and (min-width: 112.5rem) {
+  form {
+    margin-bottom: 17rem;
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 0.6rem 3rem;
+  color: #e2e8f6;
+  font-size: calc(0.75em + 1vmin);
+}
+
+input[type="submit"] {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #6f85b4;
+  color: #e2e8f6;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: #111538;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  outline: 0;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 3rem;
+  font-size: calc(0.75em + 1vmin);
+  color: #c0ceeb;
+  font-family: "Roboto", sans-serif;
+}
+
+select {
+  margin-bottom: 1rem;
+}
+
+option {
+  width: 100%;
+}
+
+button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  padding: 0.5em 1.4em;
+  border: none;
+  border-radius: 3rem;
+  background-color: #fdc100;
+  font-family: "Roboto", sans-serif;
+  font-size: calc(12px + (18 - 12) * ((100vw - 200px) / (1920 - 200)));
+  line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
+  color: #fff;
+  outline: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button:hover {
+  background-color: #f18a00;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(1rem, 1fr) (minmax(min-content, 8rem))[12] minmax(1rem, 1fr);
+      grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(1rem, 1fr);
+      grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(1rem, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-column-gap: 1vw;
+}
+
+@media screen and (min-width: 37.5em) {
+  .grid {
+    -ms-grid-columns: minmax(4rem, 1fr) (minmax(min-content, 8rem))[12] minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(4rem, 1fr);
+  }
+}
+
+@media screen and (min-width: 56.25em) {
+  .grid {
+    -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 8rem))[12] minmax(6rem, 1fr);
+        grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(6rem, 1fr);
+        grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(6rem, 1fr);
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .grid {
+    -ms-grid-columns: minmax(8rem, 1fr) (minmax(min-content, 8rem))[12] minmax(8rem, 1fr);
+        grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(8rem, 1fr);
+        grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(8rem, 1fr);
+  }
+}
+
+@media screen and (min-width: 112.5rem) {
+  .grid {
+    -ms-grid-columns: minmax(10rem, 1fr) (minmax(min-content, 8rem))[12] minmax(10rem, 1fr);
+        grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(10rem, 1fr);
+        grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(10rem, 1fr);
+  }
+}
+
+#visszaNyil {
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  color: #4b9074;
+  font-size: 4rem;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  #visszaNyil {
+    bottom: 4rem;
+    right: 2rem;
+  }
+}
+
+.section_01 {
+  min-height: 60rem;
+  height: 100vh;
+  position: relative;
+}
+
+.section_01 .cimNyil {
+  position: absolute;
+  margin-top: 2rem;
+}
+
+.section_01 .cimNyil a {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  font-size: 3rem;
+  color: #fdc100;
+}
+
+.section_01 .cimNyil h1 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 11;
+  grid-column: 3/14;
+  color: #fff;
+}
+
+.section_01 .cimNyil h1 span {
+  color: #d64c49;
+}
+
+.section_01 .iker {
+  min-height: 28rem;
+  height: 50%;
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  overflow: hidden;
+}
+
+.section_01 .iker h1 {
+  position: initial;
+  -webkit-transform: initial;
+          transform: initial;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-column: 3/8;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  margin: 3rem 0 2rem;
+}
+
+.section_01 .iker p {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-column: 3/9;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  margin: 1rem 0;
+  color: #fff;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_01 .iker p {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 5;
+    grid-column: 3/8;
+  }
+}
+
+.section_01 .iker button {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 11;
+  grid-column: 3/14;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  margin: 2rem 0;
+  font-weight: 700;
+}
+
+.section_01 .iker img {
+  grid-column: 8/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1/6;
+  -ms-grid-column-align: self-start;
+      justify-self: self-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 22rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_01 .iker img {
+    width: 30rem;
+  }
+}
+
+.section_01 .iker-1 {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#6474D6), to(#35BDD7));
+  background-image: linear-gradient(to top right, #6474D6, #35BDD7);
+}
+
+.section_01 .iker-1 h1 {
+  color: #a5c86a;
+}
+
+.section_01 .iker-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FFC1B2), to(#FF8CAD));
+  background-image: linear-gradient(to bottom right, #FFC1B2, #FF8CAD);
+}
+
+.section_01 .iker-2 h1 {
+  color: #d64c49;
+}
+
+.section_01 .iker-2 button {
+  background-color: #a5c86a;
+}
+
+.section_01 .iker-2 button:hover {
+  background-color: #4b9074;
+}
+/*# sourceMappingURL=iker.css.map */
