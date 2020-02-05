@@ -14,7 +14,7 @@
     justify-content: space-around;
 
     @media only screen and (min-width: $tp-kicsi) {
-      justify-content: end;
+      justify-content: flex-end;
     }
     li {
       cursor: pointer;
@@ -47,6 +47,8 @@
     //Logo megjelenítése 600px-nél
     @media only screen and (min-width: $tp-kicsi) {
       display: block;
+      justify-self: self-start;
+      align-self: center;
     }
   }
 }

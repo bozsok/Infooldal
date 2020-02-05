@@ -309,7 +309,7 @@ button:hover {
   .nav__ul {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: end;
+            justify-content: flex-end;
   }
 }
 
@@ -352,6 +352,11 @@ button:hover {
 @media only screen and (min-width: 37.5em) {
   .nav p {
     display: block;
+    -ms-grid-column-align: self-start;
+        justify-self: self-start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
