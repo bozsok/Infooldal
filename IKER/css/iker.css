@@ -44,7 +44,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #111538;
   font-size: calc(1em + 1vmin);
 }
@@ -189,7 +189,7 @@ textarea {
   padding: 0.6rem 3rem;
   font-size: calc(0.75em + 1vmin);
   color: #c0ceeb;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 select {
@@ -209,7 +209,7 @@ button {
   border: none;
   border-radius: 3rem;
   background-color: #fdc100;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: calc(12px + (18 - 12) * ((100vw - 200px) / (1920 - 200)));
   line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
   color: #fff;
@@ -225,9 +225,9 @@ button:hover {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(1rem, 1fr) (minmax(min-content, 8rem))[12] minmax(1rem, 1fr);
-      grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(1rem, 1fr);
-      grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(1rem, 1fr);
+  -ms-grid-columns: minmax(1rem, 1fr) (minmax(min-content, 10rem))[12] minmax(1rem, 1fr);
+      grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(-webkit-min-content, 10rem)) minmax(1rem, 1fr);
+      grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(1rem, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-column-gap: 1vw;
@@ -235,33 +235,33 @@ button:hover {
 
 @media screen and (min-width: 37.5em) {
   .grid {
-    -ms-grid-columns: minmax(4rem, 1fr) (minmax(min-content, 8rem))[12] minmax(4rem, 1fr);
-        grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(4rem, 1fr);
-        grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(4rem, 1fr);
+    -ms-grid-columns: minmax(4rem, 1fr) (minmax(min-content, 10rem))[12] minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(-webkit-min-content, 10rem)) minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(4rem, 1fr);
   }
 }
 
 @media screen and (min-width: 56.25em) {
   .grid {
-    -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 8rem))[12] minmax(6rem, 1fr);
-        grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(6rem, 1fr);
-        grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(6rem, 1fr);
+    -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 10rem))[12] minmax(6rem, 1fr);
+        grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(-webkit-min-content, 10rem)) minmax(6rem, 1fr);
+        grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(6rem, 1fr);
   }
 }
 
 @media screen and (min-width: 75em) {
   .grid {
-    -ms-grid-columns: minmax(8rem, 1fr) (minmax(min-content, 8rem))[12] minmax(8rem, 1fr);
-        grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(8rem, 1fr);
-        grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(8rem, 1fr);
+    -ms-grid-columns: minmax(8rem, 1fr) (minmax(min-content, 10rem))[12] minmax(8rem, 1fr);
+        grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(-webkit-min-content, 10rem)) minmax(8rem, 1fr);
+        grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(8rem, 1fr);
   }
 }
 
 @media screen and (min-width: 112.5rem) {
   .grid {
-    -ms-grid-columns: minmax(10rem, 1fr) (minmax(min-content, 8rem))[12] minmax(10rem, 1fr);
-        grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(-webkit-min-content, 8rem)) minmax(10rem, 1fr);
-        grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(10rem, 1fr);
+    -ms-grid-columns: minmax(10rem, 1fr) (minmax(min-content, 10rem))[12] minmax(10rem, 1fr);
+        grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(-webkit-min-content, 10rem)) minmax(10rem, 1fr);
+        grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(10rem, 1fr);
   }
 }
 
@@ -298,6 +298,7 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  z-index: 3;
 }
 
 .section_01 .cimNyil a {
@@ -306,8 +307,29 @@ button:hover {
   grid-column: 2/3;
   -ms-grid-column-align: start;
       justify-self: start;
-  font-size: 3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.section_01 .cimNyil a i {
+  position: relative;
   color: #fdc100;
+  font-size: 3rem;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .cimNyil a i {
+    font-size: 4rem;
+  }
+}
+
+.section_01 .cimNyil a i:hover {
+  color: #ed7962;
 }
 
 @media only screen and (min-width: 56.25em) {
@@ -353,8 +375,6 @@ button:hover {
 
 .section_01 .iker {
   min-height: 30rem;
-  height: 50vh;
-  width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
@@ -467,17 +487,24 @@ button:hover {
 
 .section_01 .iker-1 {
   grid-column: 1/-1;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#6474D6), to(#35BDD7));
-  background-image: linear-gradient(to top right, #6474D6, #35BDD7);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  height: 50vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#6474d6), to(#35bdd7));
+  background-image: linear-gradient(to top right, #6474d6, #35bdd7);
+  position: relative;
 }
 
 @media only screen and (min-width: 37.5em) {
   .section_01 .iker-1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 7;
-    grid-column: 1/8;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
     min-height: 60rem;
     height: 100vh;
+    width: 50%;
+    z-index: 1;
   }
 }
 
@@ -487,19 +514,31 @@ button:hover {
 
 .section_01 .iker-2 {
   grid-column: 1/-1;
-  padding-top: 3rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#FFC1B2), to(#FF8CAD));
-  background-image: linear-gradient(to bottom right, #FFC1B2, #FF8CAD);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  height: 50vh;
+  margin-top: 50vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffc1b2), to(#ff8cad));
+  background-image: linear-gradient(to bottom right, #ffc1b2, #ff8cad);
 }
 
 @media only screen and (min-width: 37.5em) {
   .section_01 .iker-2 {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 7;
-    grid-column: 8/15;
+    margin-top: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 14;
+    grid-column: 1/15;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column-align: self-end;
+        justify-self: self-end;
     padding: 0;
     min-height: 60rem;
     height: 100vh;
+    width: 50%;
+    z-index: 1;
   }
 }
 
@@ -513,5 +552,52 @@ button:hover {
 
 .section_01 .iker-2 button:hover {
   background-color: #4b9074;
+}
+
+.section_01 i {
+  position: absolute;
+  top: 50%;
+  color: #ed7962;
+  font-size: 3rem;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.section_01 i:hover {
+  color: #fdc100;
+}
+
+.section_01 #nyilBal {
+  left: 1rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_01 #nyilBal {
+    left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 #nyilBal {
+    left: 3rem;
+  }
+}
+
+.section_01 #nyilJobb {
+  right: 1rem;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_01 #nyilJobb {
+    right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 #nyilJobb {
+    right: 3rem;
+  }
 }
 /*# sourceMappingURL=iker.css.map */

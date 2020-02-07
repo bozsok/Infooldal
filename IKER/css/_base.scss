@@ -16,15 +16,15 @@ $szin-14: #a5c86a;
 $szin-15: #4b9074;
 $szin-16: #284d3b;
 $feher-szin: #fff;
-$kek-sotet-szin: #6474D6;
-$kek-vilagos-szin: #35BDD7;
-$rozsaszin-sotet-szin: #FF8CAD;
-$rozsaszin-vilagos-szin: #FFC1B2;
+$kek-sotet-szin: #6474d6;
+$kek-vilagos-szin: #35bdd7;
+$rozsaszin-sotet-szin: #ff8cad;
+$rozsaszin-vilagos-szin: #ffc1b2;
 $kek-szinatmenet: linear-gradient(to top right, $kek-sotet-szin, $kek-vilagos-szin);
 $rozsaszin-szinatmenet: linear-gradient(to bottom right, $rozsaszin-vilagos-szin, $rozsaszin-sotet-szin);
 
 // Font
-$betu-elsodleges: "Roboto", sans-serif;
+$betu-elsodleges: "Open Sans", sans-serif;
 
 //Töréspontok
 $tp-orias: 112.5rem; //1800px -> 1800 / 16 = 112.5
@@ -76,7 +76,7 @@ body {
   color: $szin-10;
   font-size: calc(1em + 1vmin); //Betűméret nővelése + reszponzivitása. - Nem biztos, hogy beválik!
 }
-h1 {  
+h1 {
   line-height: 1.3;
 }
 h2 {
@@ -170,7 +170,7 @@ input[type="submit"] {
   cursor: pointer;
   text-transform: uppercase;
   background-color: $szin-08;
-  color: $szin-05;  
+  color: $szin-05;
   transition: all 0.4s;
 
   &:hover {
@@ -210,7 +210,7 @@ button {
   font-family: $betu-elsodleges;
   font-size: calc(12px + (18 - 12) * ((100vw - 200px) / (1920 - 200)));
   line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
-  color: $feher-szin;  
+  color: $feher-szin;
   outline: none;
   transition: all 0.4s;
 
@@ -221,32 +221,21 @@ button {
 // Az alap grid
 .grid {
   display: grid;
-  grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 8rem)) minmax(
-      1rem,
-      1fr
-    );
+  grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(1rem,1fr);
   grid-template-rows: auto;
   grid-column-gap: 1vw;
 
   @media screen and (min-width: $tp-kicsi) {
-    grid-template-columns:
-      minmax(4rem, 1fr) repeat(12, minmax(min-content, 8rem))
-      minmax(4rem, 1fr);
+    grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(4rem, 1fr);
   }
   @media screen and (min-width: $tp-kozepes) {
-    grid-template-columns:
-      minmax(6rem, 1fr) repeat(12, minmax(min-content, 8rem))
-      minmax(6rem, 1fr);
+    grid-template-columns: minmax(6rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(6rem, 1fr);
   }
   @media screen and (min-width: $tp-nagy) {
-    grid-template-columns:
-      minmax(8rem, 1fr) repeat(12, minmax(min-content, 8rem))
-      minmax(8rem, 1fr);
+    grid-template-columns: minmax(8rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(8rem, 1fr);
   }
   @media screen and (min-width: $tp-orias) {
-    grid-template-columns:
-      minmax(10rem, 1fr) repeat(12, minmax(min-content, 8rem))
-      minmax(10rem, 1fr);
+    grid-template-columns: minmax(10rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(10rem, 1fr);
   }
 
   //overflow-y: scroll; // előcsaltam a scroll sávját függőleges irányba

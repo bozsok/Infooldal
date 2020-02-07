@@ -3,25 +3,42 @@
   position: relative;
   //Üdvözlünk szöveg és a visszanyíl az Informatika oldalra
   .cimNyil {
-    position: absolute;    
+    position: absolute;
     margin-top: 3rem;
     width: 100%;
     align-items: center;
     justify-items: center;
+    z-index: 3;
     //Nyíl
     a {
       grid-column: 2/3;
       justify-self: start;
-      font-size: 3rem;
-      color: $szin-01;
+      align-self: center;    
       
+      i {
+        position: relative;
+        color: $szin-01;
+        font-size: 3rem;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s;
+
+        @media only screen and (min-width: $tp-nagy) {
+        font-size: 4rem;
+      }
+
+        &:hover {
+        color: $szin-03;
+      }
+      }
+
       @media only screen and (min-width: $tp-kozepes) {
         grid-column: 1/2;
         margin-left: 2rem;
       }
       @media only screen and (min-width: $tp-nagy) {
         margin-left: 3rem;
-      }
+      }     
     }
     //Üdvözlő szöveg
     h1 {
@@ -44,8 +61,8 @@
   //Dupla hasáb
   .iker {
     min-height: 30rem;
-    height: 50vh;
-    width: 100%;
+    //height: 100vh;
+    //width: 100%;
     align-content: center;
     justify-items: center;
     overflow: hidden;
@@ -56,7 +73,7 @@
       grid-column: 2/14;
       grid-row: 1/2;
       margin: 3vh 0 2vh;
-      
+
       @media only screen and (min-width: $tp-kozepes) {
         height: max-content;
       }
@@ -111,41 +128,92 @@
     }
   }
   //Egyedi jelemzők hasábokra
+  //Bal oldali panel
   .iker-1 {
     grid-column: 1/-1;
+    grid-row: 1/2;
+    height: 50vh;
     background-image: $kek-szinatmenet;
-    
+
+    position: relative;
+
     @media only screen and (min-width: $tp-kicsi) {
-      grid-column: 1/8;
+      grid-row: 1/2;
       min-height: 60rem;
       height: 100vh;
+      width: 50%;
+      z-index: 1;
     }
-
+    
     h1 {
       color: $szin-14;
-    }   
+    }
   }
-
+  
+  //Jobb oldali panel
   .iker-2 {
     grid-column: 1/-1;
-    padding-top: 3rem;
+    grid-row: 1/2;
+    height: 50vh;
+    margin-top: 50vh;
     background-image: $rozsaszin-szinatmenet;
 
-    @media only screen and (min-width: $tp-kicsi) {      
-      grid-column: 8/15;
+    @media only screen and (min-width: $tp-kicsi) {
+      margin-top: 0;
+      grid-column: 1/15;
+      grid-row: 1/2;
+      justify-self: self-end;
       padding: 0;
       min-height: 60rem;
       height: 100vh;
+      width: 50%;
+      z-index: 1;
     }
-
+    //Saját visszanyil az osztott képernyőre
+    
     h1 {
       color: $szin-04;
     }
     button {
       background-color: $szin-14;
+
       &:hover {
         background-color: $szin-15;
       }
     }
   }
+
+  //Visszanyil az osztott képernyőre (bal és jobb panel)
+    i {
+      position: absolute;
+      top: 50%;
+      color: $szin-03;
+      font-size: 3rem;
+      opacity: 0;
+      visibility: hidden;
+      cursor: pointer;
+      z-index: 3;      
+
+      &:hover {
+        color: $szin-01;
+      }
+    }
+    #nyilBal {      
+      left: 1rem;
+      @media only screen and (min-width: $tp-kicsi) {
+        left: 2rem;
+      }
+      @media only screen and (min-width: $tp-nagy) {
+        left: 3rem;
+      }
+    }
+    #nyilJobb {      
+      right: 1rem;
+      @media only screen and (min-width: $tp-kicsi) {
+        right: 2rem;
+      }
+      @media only screen and (min-width: $tp-nagy) {
+        right: 3rem;
+      }
+    }
 }

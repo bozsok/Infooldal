@@ -191,11 +191,12 @@ label {
   //semmi egyenlőre
 }
 //Általános gomb, pl. navigációnál, az oldalon nagyobb padding-gel kell!
-button {
+.button {
   width: max-content;
+  min-width: 12rem;
   cursor: pointer;
   padding: 0.5em 2em;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   border: none;
   border-radius: 3rem;
   background-color: $szin-01;
