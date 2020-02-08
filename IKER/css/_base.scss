@@ -20,7 +20,8 @@ $kek-sotet-szin: #6474d6;
 $kek-vilagos-szin: #35bdd7;
 $rozsaszin-sotet-szin: #ff8cad;
 $rozsaszin-vilagos-szin: #ffc1b2;
-$kek-szinatmenet: linear-gradient(to top right, $kek-sotet-szin, $kek-vilagos-szin);
+$kek-szinatmenet: linear-gradient(to top right, lighten($kek-sotet-szin, 0%), $kek-vilagos-szin);
+$kek-szinatmenet-vilagos: linear-gradient(to top right, lighten($kek-sotet-szin, 80%), $kek-vilagos-szin);
 $rozsaszin-szinatmenet: linear-gradient(to bottom right, $rozsaszin-vilagos-szin, $rozsaszin-sotet-szin);
 
 // Font
@@ -54,6 +55,9 @@ $tp-kicsi: 37.5em; //600 / 16 = 37.5
 .oriasBetu {
   font-size: calc(22px + (45 - 22) * ((100vw - 200px) / (1920 - 200)));
 }
+.page {
+  display: none;
+}
 //Alap beállítások
 *,
 *::after,
@@ -83,7 +87,7 @@ h2 {
   font-size: calc(16px + (26 - 16) * ((100vw - 200px) / (1920 - 200)));
 }
 p {
-  //font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
   line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
 }
 //Listaelemek
@@ -223,7 +227,7 @@ button {
   display: grid;
   grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(1rem,1fr);
   grid-template-rows: auto;
-  grid-column-gap: 1vw;
+  //grid-column-gap: 1vw;
 
   @media screen and (min-width: $tp-kicsi) {
     grid-template-columns: minmax(4rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(4rem, 1fr);

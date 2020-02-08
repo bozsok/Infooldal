@@ -26,6 +26,10 @@
   font-size: calc(22px + (45 - 22) * ((100vw - 200px) / (1920 - 200)));
 }
 
+.page {
+  display: none;
+}
+
 *,
 *::after,
 *::before {
@@ -58,6 +62,7 @@ h2 {
 }
 
 p {
+  font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
   line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
 }
 
@@ -230,7 +235,6 @@ button:hover {
       grid-template-columns: minmax(1rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(1rem, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-column-gap: 1vw;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -374,7 +378,6 @@ button:hover {
 }
 
 .section_01 .iker {
-  min-height: 30rem;
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
@@ -419,7 +422,7 @@ button:hover {
     -ms-grid-column: 3;
     -ms-grid-column-span: 10;
     grid-column: 3/13;
-    min-height: 7rem;
+    min-height: 5rem;
   }
 }
 
@@ -485,11 +488,76 @@ button:hover {
   }
 }
 
+.section_01 .iker p {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  display: none;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: #111538;
+}
+
+.section_01 .iker ul {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  margin: 2rem 0;
+  display: none;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.section_01 .iker ul li {
+  color: #d68651;
+}
+
+.section_01 .iker ul li:not(:last-child) {
+  margin-right: 5rem;
+}
+
+.section_01 .iker ul li i {
+  position: initial;
+  font-size: 5rem;
+  color: #fff;
+  opacity: 1;
+  visibility: visible;
+}
+
+.section_01 .iker ul li i:hover {
+  color: #ed7962;
+}
+
+.section_01 .iker ul li p {
+  display: none;
+  cursor: pointer;
+  color: #a5c86a;
+  font-weight: 700;
+}
+
+.section_01 .iker ul li p:hover {
+  color: #fdc100;
+}
+
+.section_01 .iker ul li .szinIker2 {
+  color: #fff;
+}
+
+.section_01 .iker ul li .szinIker2:hover {
+  color: #ed7962;
+}
+
 .section_01 .iker-1 {
   grid-column: 1/-1;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  min-height: 30rem;
   height: 50vh;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#6474d6), to(#35bdd7));
   background-image: linear-gradient(to top right, #6474d6, #35bdd7);
@@ -501,8 +569,8 @@ button:hover {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    min-height: 60rem;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 50%;
     z-index: 1;
   }
@@ -518,6 +586,7 @@ button:hover {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   height: 50vh;
+  min-height: 30rem;
   margin-top: 50vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ffc1b2), to(#ff8cad));
   background-image: linear-gradient(to bottom right, #ffc1b2, #ff8cad);
@@ -536,7 +605,7 @@ button:hover {
         justify-self: self-end;
     padding: 0;
     min-height: 60rem;
-    height: 100vh;
+    height: 100%;
     width: 50%;
     z-index: 1;
   }
@@ -556,7 +625,7 @@ button:hover {
 
 .section_01 i {
   position: absolute;
-  top: 50%;
+  top: 5%;
   color: #ed7962;
   font-size: 3rem;
   opacity: 0;
