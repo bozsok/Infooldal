@@ -21,7 +21,7 @@ $kek-vilagos-szin: #35bdd7;
 $rozsaszin-sotet-szin: #ff8cad;
 $rozsaszin-vilagos-szin: #ffc1b2;
 $kek-szinatmenet: linear-gradient(to top right, $kek-sotet-szin, $kek-vilagos-szin);
-$kek-szinatmenet-vilagos: linear-gradient(to top right, lighten($kek-sotet-szin, 80%), $kek-vilagos-szin);
+$kek-szinatmenet-vilagos: linear-gradient(to top right, lighten($kek-sotet-szin, 10%), $kek-vilagos-szin);
 $rozsaszin-szinatmenet: linear-gradient(to bottom right, $rozsaszin-vilagos-szin, $rozsaszin-sotet-szin);
 
 // Font
@@ -96,12 +96,18 @@ ul {
   list-style-type: none;
 
   li {
-    color: $szin-09;
+    color: $szin-10;
     width: max-content;
+    font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
+    line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
   }
 }
 ol {
   margin-left: 1rem;
+    font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
+  line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
+  li {
+  }
 }
 //Kiemelés
 span {
@@ -253,7 +259,7 @@ button {
   right: 6rem;
   color: $szin-15;
   font-size: 4rem;
-  z-index: 2;
+  z-index: 3;
   transition: 0.3s;
   opacity: 0;
   visibility: hidden;

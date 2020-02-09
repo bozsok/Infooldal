@@ -61,7 +61,7 @@
       justify-content: center;
 
       @media only screen and (min-width: $tp-kozepes) {
-        justify-content: end;
+        justify-content: flex-end;
       }
       @media only screen and (min-width: $tp-nagy) {
         grid-column: 2/14;
@@ -212,18 +212,20 @@
       grid-column: 2/14;
       grid-row: 3/4;
       height: min-content;
-      width: 100%;
+      max-width: 120rem;
+      //width: 100%;
 
       //display: grid; FURCSA, hogy nem kell előre beállítani!!!
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: minmax(0rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(0rem, 1fr); //muszáj ilyen formában megadni (eleje-vége is minmax)!!!
+      grid-template-rows: auto;
 
       h1 {
-        grid-column: 1/13;
+        //grid-column: 1/13;
         text-align: center;
       }
 
       p {
-        grid-column: 1/13;
+        grid-column: 1/15;
         margin-top: 2rem;
         padding: 1rem;
         text-align: center;
@@ -252,7 +254,7 @@
     grid-column: 1/-1;
     grid-row: 1/2;
     min-height: 30rem;
-    height: 50vh;
+    height: 50vh;    
     background-image: $kek-szinatmenet;
     position: relative;
 

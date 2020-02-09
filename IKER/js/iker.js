@@ -1,3 +1,18 @@
+/************************************************
+Scrollozó nyilacska a képernyő jobb alsó sarkában
+*************************************************/
+const visszaNyil = document.getElementById('visszaNyil');
+const scrollozas = () => {
+    let elmozdulasPixelben = window.scrollY;
+
+    if (elmozdulasPixelben > 20) {
+        visszaNyil.style.cssText = "opacity: 1; visibility: visible";
+    } else {
+        visszaNyil.style.cssText = "opacity: 0; visibility: hidden";
+    }
+}
+window.addEventListener("scroll", scrollozas);
+
 //Változók
 const gombIker1 = document.querySelector('.gombIker1');
 const gombIker2 = document.querySelector('.gombIker2');
@@ -437,4 +452,24 @@ else if (minSzel1800.matches) {
     //IKER-2 oldal végződik
 }
 
-
+//Tananyag rész
+//Eltüntetem az összes tananyag osztályú oldalt a TANANYAG oldalról
+const tananyagUres = document.querySelectorAll('.tananyag');
+for (let i = 0; i < tananyagUres.length; i++) {
+    tananyagUres[i].style.display = 'none';
+}
+//Megjelenítem a TANANYAG oldal 1. óráját
+document.querySelector('.ora_01-page').style.display = 'grid';   //////ÁTÍRNI, HA VÉGEZTEM .ora_01-page-re!
+//Kigyűjtöm a TANANYAG linkekhez tartozó oldalakat és a linkre kattintva betöltöm azokat
+const tananyagLink = document.querySelectorAll('.tananyag-link');
+for (let i = 0; i < tananyagLink.length; i++) {
+    tananyagLink[i].addEventListener('click', function (event) {
+        event.preventDefault(); //a kattintásra nem történik semmi ezzel a függvénnyel
+        const name = this.dataset.page;
+        const tananyagUres = document.querySelectorAll('.tananyag');
+        for (let i = 0; i < tananyagUres.length; i++) {
+            tananyagUres[i].style.display = 'none';
+        }
+        document.querySelector('.' + name + '-page').style.display = 'grid';
+    });
+}
