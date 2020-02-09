@@ -38,8 +38,8 @@
       align-self: center;
 
       @media only screen and (min-width: $tp-nagy) {
-      grid-column: 1/2;
-      margin-left: 3rem;
+        grid-column: 1/2;
+        margin-left: 3rem;
       }
     }
     #nyilJobb {
@@ -48,8 +48,8 @@
       align-self: center;
 
       @media only screen and (min-width: $tp-nagy) {
-      grid-column: 14/15;
-      margin-right: 3rem;
+        grid-column: 14/15;
+        margin-right: 3rem;
       }
     }
 
@@ -109,8 +109,8 @@
       align-self: center;
 
       @media only screen and (min-width: $tp-nagy) {
-      grid-column: 1/2;
-      margin-left: 3rem;
+        grid-column: 1/2;
+        margin-left: 3rem;
       }
 
       i {
@@ -184,13 +184,6 @@
         min-height: 0;
       }
     }
-    //Gomb
-    button {
-      grid-column: 2/14;
-      grid-row: 4/5;
-      margin-top: 7vh;
-      font-weight: 700;
-    }
     //Kép
     img {
       grid-column: 2/14;
@@ -215,15 +208,42 @@
         width: 20vw;
       }
     }
-    //Leírás
-    p {
+    main {
       grid-column: 2/14;
-      display: none;
+      grid-row: 3/4;
       height: min-content;
-      margin-top: 2rem;
-      padding: 1rem;
-      text-align: center;
-      color: $szin-10;
+      width: 100%;
+
+      //display: grid; FURCSA, hogy nem kell előre beállítani!!!
+      grid-template-columns: repeat(12, 1fr);
+
+      h1 {
+        grid-column: 1/13;
+        text-align: center;
+      }
+
+      p {
+        grid-column: 1/13;
+        margin-top: 2rem;
+        padding: 1rem;
+        text-align: center;
+        color: $szin-10;
+
+        @media only screen and (min-width: $tp-kozepes) {
+          grid-column: 1/10;
+          text-align: left;
+        }
+        @media only screen and (min-width: $tp-nagy) {
+          grid-column: 1/11;
+        }
+      }
+    }
+    //Gomb
+    button {
+      grid-column: 2/14;
+      grid-row: 5/6;
+      margin-top: 7vh;
+      font-weight: 700;
     }
   }
   //Egyedi jelemzők hasábokra

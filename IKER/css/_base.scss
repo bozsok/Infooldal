@@ -55,6 +55,10 @@ $tp-kicsi: 37.5em; //600 / 16 = 37.5
 .oriasBetu {
   font-size: calc(22px + (45 - 22) * ((100vw - 200px) / (1920 - 200)));
 }
+.page {
+  display: none;
+}
+
 //Alap beállítások
 *,
 *::after,

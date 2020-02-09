@@ -10,7 +10,7 @@ const nav = document.querySelector('.nav');
 
 let kep;
 
-let iker = 0; //Ezzel fogjuk szétválasztani a kódot, ahol két szinte egyfoma nevű változó van. pl.: gombIker1 és 2
+let iker = 0; //Ezzel fogjuk szétválasztani a kódot az IKER-1 és IKER-2 oldalakhoz
 
 //Ez ezért kell, hogy gördülékeny legyen a szélesség növelése mindkét hasábnál
 gombIker1.addEventListener('mouseover', function () {
@@ -29,7 +29,7 @@ gombIker2.addEventListener('mouseover', function () {
 });
 //Kiszervezés függvényekbe
 //Navigációs felirat színezése függően IKER-1 vagy IKER-2 oldaltól
-function navSzinezes() {    
+function navSzinezes() {
     const pek = document.querySelectorAll('.nav p');
     for (let i = 0; i < pek.length; i++) {
         if (iker == 2) {
@@ -51,50 +51,134 @@ function navSzinezes() {
         }
     }
 }
+//Menü kiosztása
+const pageLink = document.querySelectorAll('.page-link');
+for (let i = 0; i < pageLink.length; i++) {
+    pageLink[i].addEventListener('click', function (event) {
+        event.preventDefault(); //a kattintásra nem történik semmi ezzel a függvénnyel
+        const name = this.dataset.page;
+        const pageUres = document.querySelectorAll('.page');
+        for (let i = 0; i < pageUres.length; i++) {
+            console.log(pageUres.lenght);
+            pageUres[i].style.display = 'none';
+        }
+        if (iker == 1) {
+            document.querySelector('.iker-1 .' + name + '-page').style.display = 'grid';
+        } else {
+            document.querySelector('.iker-2 .' + name + '-page').style.display = 'grid';
+        }
+    });
+}
 //IKER-1 oldalon lévő gombra kattintva eltünik:
 function cimNyilEltunik() {
     cimNyil.style.cssText = 'opacity: 0; visibility: hidden'; //be kell állítani, hogy eltünt állapotban se legyen kattintható!!!!
     cimNyil.style.transition = 'all 0.5s'
 }
-function ikerGomb() {
-    //Ha az IKER-1 gomra kattintunk...
+function ikerGomb() {    
     navSzinezes();
+    //Mivel 2 egyforma tartalom van függően az IKER-1 vagy IKER-2 oldaltól és csak egyiket mutatja meg, ezért ki kellett gyűjteni az összeset és a megfelelőt hozzárendelni az odavaló oldalhoz.
+    let homePageAll = document.querySelectorAll('.home-page');
+    let homePage = document.querySelector('.home-page')
+    for (let i = 0; i < homePageAll.length; i++) {
+        if (iker == 1) {
+            homePage = homePageAll[0];
+        } else {
+            homePage = homePageAll[1];
+        }        
+    }
+    let informaciokPageAll = document.querySelectorAll('.informaciok-page');
+    let informaciokPage = document.querySelector('.informaciok-page')
+    for (let i = 0; i < informaciokPageAll.length; i++) {
+        if (iker == 1) {
+            informaciokPage = informaciokPageAll[0];
+        } else {
+            informaciokPage = informaciokPageAll[1];
+        }
+    }
+    let tananyagPageAll = document.querySelectorAll('.tananyag-page');
+    let tananyagPage = document.querySelector('.tananyag-page')
+    for (let i = 0; i < tananyagPageAll.length; i++) {
+        if (iker == 1) {
+            tananyagPage = tananyagPageAll[0];
+        } else {
+            tananyagPage = tananyagPageAll[1];
+        }
+    }
+    let feladatokPageAll = document.querySelectorAll('.feladatok-page');
+    let feladatokPage = document.querySelector('.feladatok-page')
+    for (let i = 0; i < feladatokPageAll.length; i++) {
+        if (iker == 1) {
+            feladatokPage = feladatokPageAll[0];
+        } else {
+            feladatokPage = feladatokPageAll[1];
+        }
+    }
+    //Ha az IKER-1 gomra kattintunk...
     if (iker == 1) {
+        homePage.style.display = 'grid';
+        informaciokPage.style.display = 'none';
+        tananyagPage.style.display = 'none';
+        feladatokPage.style.display = 'none';
+
         nav.style.display = 'grid';
         nyilBal.style.display = 'block'
         nyilJobb.style.display = 'none';
 
         if (iker1oldal.style.height == '100%') {
             iker1oldal.style.alignContent = 'start';
-            document.querySelector('.iker-1 .leiras').style.display = "block";
+            document.querySelector('main p').style.display = "block";
             document.querySelector('.iker-1 h1').style.marginTop = "7rem";
         }
         else if (iker1oldal.style.width == '100%') {
             iker1oldal.style.alignContent = 'start';
+            document.querySelector('main p').style.display = "block";
             document.querySelector('.iker-1 h1').style.marginTop = "7rem";
         }
     }
-    //Ha az IKER-2 gombra katintunk
+    //Ha az IKER-2 gombra kattintunk
     else {
+        homePage.style.display = 'grid';
+        informaciokPage.style.display = 'none';
+        tananyagPage.style.display = 'none';
+        feladatokPage.style.display = 'none';
+
         nav.style.display = 'grid';
         nyilJobb.style.display = 'block';
         nyilBal.style.display = 'none';
 
         if (iker2oldal.style.height == '100vh') {
             iker2oldal.style.alignContent = 'start';
-            document.querySelector('.iker-2 .leiras').style.display = "block";
+            document.querySelector('main p').style.display = "block";
             document.querySelector('.iker-2 h1').style.marginTop = "7rem";
         }
         else if (iker2oldal.style.width == '100%') {
             iker2oldal.style.alignContent = 'start';
+            document.querySelector('main p').style.display = "block";
             document.querySelector('.iker-2 h1').style.marginTop = "7rem";
         }
     }
 }
 function visszaGomb() {
+    let osszesHome = document.querySelectorAll('.home-page');
+    for (let i = 0; i < osszesHome.length; i++) {
+        osszesHome[i].style.display = 'none';
+    }
+    let osszesInformaciok = document.querySelectorAll('.informaciok-page');
+    for (let i = 0; i < osszesInformaciok.length; i++) {
+        osszesInformaciok[i].style.display = 'none';
+    }
+    let osszesTananyag = document.querySelectorAll('.tananyag-page');
+    for (let i = 0; i < osszesTananyag.length; i++) {
+        osszesTananyag[i].style.display = 'none';
+    }
+    let osszesFeladatok = document.querySelectorAll('.feladatok-page');
+    for(let i = 0; i < osszesFeladatok.length; i++) {
+        osszesFeladatok[i].style.display = 'none';
+    };
+
     //tartalom eltűnik
     if (iker == 1) {
-        document.querySelector('.iker-1 .leiras').style.display = "none";
+        document.querySelector('main p').style.display = "none";
         document.querySelector('.iker-1 h1').style.marginTop = "3vh";
 
         cimNyil.style.cssText = 'opacity: 1; visibility: visible';
@@ -103,7 +187,7 @@ function visszaGomb() {
         gombIker1.style.display = 'block';
 
     } else {
-        document.querySelector('.iker-2 .leiras').style.display = "none"
+        document.querySelector('main p').style.display = "none"
         document.querySelector('.iker-2 h1').style.marginTop = "3vh";
 
         cimNyil.style.cssText = 'opacity: 1; visibility: visible';
@@ -148,7 +232,6 @@ if (maxSzel599.matches) {
     gombIker2.addEventListener('click', function () {
         iker2oldal.style.marginTop = '0vh';
         if (maxSzel399.matches) {
-            console.log("499px alatti");
             iker2oldal.style.minHeight = '80rem';
         } else {
             iker2oldal.style.minHeight = '60rem';
@@ -184,7 +267,7 @@ else if (maxSzel899.matches) {
         let ido = setTimeout(() => {
             kep.style.display = 'none';
             gombIker1.style.display = 'none';
-            document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: center; grid-column: 2/14; grid-row: 3/4';
+            //document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: center; grid-column: 2/14; grid-row: 3/4';
             ikerGomb();
         }, 850);
     });
@@ -205,7 +288,7 @@ else if (maxSzel899.matches) {
         let ido = setTimeout(() => {
             gombIker2.style.display = 'none';
             kep.style.display = 'none';
-            document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: center; grid-column: 2/14; grid-row: 3/4';
+            //document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: center; grid-column: 2/14; grid-row: 3/4';
             ikerGomb();
         }, 850);
     });
@@ -228,7 +311,7 @@ else if (maxSzel1199.matches) {
         //Megjelenik a tartalom X idő múlva
         let ido = setTimeout(() => {
             gombIker1.style.display = 'none';
-            document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
+            //document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
             kep.style.cssText = "display: block; opacity: 1; visibility: visible; grid-column: 12/-1; grid-row: 3/5; width: 200%; overflow: hidden";
             ikerGomb();
         }, 850);
@@ -249,7 +332,7 @@ else if (maxSzel1199.matches) {
         //Megjelenik a tartalom X idő múlva
         let ido = setTimeout(() => {
             gombIker2.style.display = 'none';
-            document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
+            //document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
             kep.style.cssText = "display: block; opacity: 1; visibility: visible; grid-column: 12/-1; grid-row: 3/5; width: 200%; overflow: hidden";
             ikerGomb();
         }, 850);
@@ -273,7 +356,7 @@ else if (maxSzel1799.matches) {
         //Megjelenik a tartalom X idő múlva
         let ido = setTimeout(() => {
             gombIker1.style.display = 'none';
-            document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
+            //document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
             kep.style.cssText = "display: block; opacity: 1; visibility: visible; grid-column: 12/-1; grid-row: 3/5; width: 130%; overflow: hidden";
             ikerGomb();
         }, 850);
@@ -294,7 +377,7 @@ else if (maxSzel1799.matches) {
         //Megjelenik a tartalom X idő múlva
         let ido = setTimeout(() => {
             gombIker2.style.display = 'none';
-            document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
+            //document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
             kep.style.cssText = "display: block; opacity: 1; visibility: visible; grid-column: 12/-1; grid-row: 3/5; width: 130%; overflow: hidden";
             ikerGomb();
         }, 850);
@@ -318,7 +401,7 @@ else if (minSzel1800.matches) {
         //Megjelenik a tartalom X idő múlva
         let ido = setTimeout(() => {
             gombIker1.style.display = 'none';
-            document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
+            //document.querySelector('.iker-1 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
             kep.style.cssText = "display: block; opacity: 1; visibility: visible; grid-column: 12/-1; grid-row: 3/5; width: 100%; overflow: hidden";
             ikerGomb();
         }, 850);
@@ -339,7 +422,7 @@ else if (minSzel1800.matches) {
         //Megjelenik a tartalom X idő múlva
         let ido = setTimeout(() => {
             gombIker2.style.display = 'none';
-            document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
+            //document.querySelector('.iker-2 .leiras').style.cssText = 'display: block; text-align: left; grid-column: 2/12; grid-row: 3/4';
             kep.style.cssText = "display: block; opacity: 1; visibility: visible; grid-column: 12/-1; grid-row: 3/5; width: 100%; overflow: hidden";
             ikerGomb();
         }, 850);
