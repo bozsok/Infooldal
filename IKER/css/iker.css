@@ -26,10 +26,6 @@
   font-size: calc(22px + (45 - 22) * ((100vw - 200px) / (1920 - 200)));
 }
 
-.page {
-  display: none;
-}
-
 *,
 *::after,
 *::before {
@@ -294,9 +290,149 @@ button:hover {
   position: relative;
 }
 
+.section_01 .nav {
+  grid-column: 1/-1;
+  margin: 2rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.1rem;
+  display: none;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .section_01 .nav {
+    height: 4rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .nav {
+    height: 5rem;
+  }
+}
+
+.section_01 .nav i {
+  color: #ed7962;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .nav i {
+    font-size: 4rem;
+  }
+}
+
+.section_01 .nav i:hover {
+  color: #fdc100;
+}
+
+.section_01 .nav #nyilBal {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .nav #nyilBal {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-left: 3rem;
+  }
+}
+
+.section_01 .nav #nyilJobb {
+  -ms-grid-column: 13;
+  -ms-grid-column-span: 1;
+  grid-column: 13/14;
+  -ms-grid-column-align: self-end;
+      justify-self: self-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .nav #nyilJobb {
+    -ms-grid-column: 14;
+    -ms-grid-column-span: 1;
+    grid-column: 14/15;
+    margin-right: 3rem;
+  }
+}
+
+.section_01 .nav ul {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 10;
+  grid-column: 3/13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .section_01 .nav ul {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .nav ul {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 12;
+    grid-column: 2/14;
+  }
+}
+
+.section_01 .nav ul li:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .section_01 .nav ul li:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .nav ul li:not(:last-child) {
+    margin-right: 4rem;
+  }
+}
+
+.section_01 .nav ul li p {
+  cursor: pointer;
+  color: #111538;
+  font-weight: 700;
+}
+
+.section_01 .nav ul li p:hover {
+  color: #fdc100;
+}
+
 .section_01 .cimNyil {
   position: absolute;
-  margin-top: 3rem;
+  top: 0;
+  left: 0;
+  margin-top: 2rem;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -314,6 +450,15 @@ button:hover {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media only screen and (min-width: 75em) {
+  .section_01 .cimNyil a {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-left: 3rem;
+  }
 }
 
 .section_01 .cimNyil a i {
@@ -336,21 +481,6 @@ button:hover {
   color: #ed7962;
 }
 
-@media only screen and (min-width: 56.25em) {
-  .section_01 .cimNyil a {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    margin-left: 2rem;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .section_01 .cimNyil a {
-    margin-left: 3rem;
-  }
-}
-
 .section_01 .cimNyil h1 {
   display: none;
   -ms-grid-column: 3;
@@ -371,9 +501,9 @@ button:hover {
 
 @media only screen and (min-width: 56.25em) {
   .section_01 .cimNyil h1 {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 12;
-    grid-column: 2/14;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 11;
+    grid-column: 3/14;
   }
 }
 
@@ -502,56 +632,6 @@ button:hover {
   color: #111538;
 }
 
-.section_01 .iker ul {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 12;
-  grid-column: 2/14;
-  margin: 2rem 0;
-  display: none;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-}
-
-.section_01 .iker ul li {
-  color: #d68651;
-}
-
-.section_01 .iker ul li:not(:last-child) {
-  margin-right: 5rem;
-}
-
-.section_01 .iker ul li i {
-  position: initial;
-  font-size: 5rem;
-  color: #fff;
-  opacity: 1;
-  visibility: visible;
-}
-
-.section_01 .iker ul li i:hover {
-  color: #ed7962;
-}
-
-.section_01 .iker ul li p {
-  display: none;
-  cursor: pointer;
-  color: #a5c86a;
-  font-weight: 700;
-}
-
-.section_01 .iker ul li p:hover {
-  color: #fdc100;
-}
-
-.section_01 .iker ul li .szinIker2 {
-  color: #fff;
-}
-
-.section_01 .iker ul li .szinIker2:hover {
-  color: #ed7962;
-}
-
 .section_01 .iker-1 {
   grid-column: 1/-1;
   -ms-grid-row: 1;
@@ -621,52 +701,5 @@ button:hover {
 
 .section_01 .iker-2 button:hover {
   background-color: #4b9074;
-}
-
-.section_01 i {
-  position: absolute;
-  top: 5%;
-  color: #ed7962;
-  font-size: 3rem;
-  opacity: 0;
-  visibility: hidden;
-  cursor: pointer;
-  z-index: 3;
-}
-
-.section_01 i:hover {
-  color: #fdc100;
-}
-
-.section_01 #nyilBal {
-  left: 1rem;
-}
-
-@media only screen and (min-width: 37.5em) {
-  .section_01 #nyilBal {
-    left: 2rem;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .section_01 #nyilBal {
-    left: 3rem;
-  }
-}
-
-.section_01 #nyilJobb {
-  right: 1rem;
-}
-
-@media only screen and (min-width: 37.5em) {
-  .section_01 #nyilJobb {
-    right: 2rem;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .section_01 #nyilJobb {
-    right: 3rem;
-  }
 }
 /*# sourceMappingURL=iker.css.map */

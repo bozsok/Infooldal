@@ -20,7 +20,7 @@ $kek-sotet-szin: #6474d6;
 $kek-vilagos-szin: #35bdd7;
 $rozsaszin-sotet-szin: #ff8cad;
 $rozsaszin-vilagos-szin: #ffc1b2;
-$kek-szinatmenet: linear-gradient(to top right, lighten($kek-sotet-szin, 0%), $kek-vilagos-szin);
+$kek-szinatmenet: linear-gradient(to top right, $kek-sotet-szin, $kek-vilagos-szin);
 $kek-szinatmenet-vilagos: linear-gradient(to top right, lighten($kek-sotet-szin, 80%), $kek-vilagos-szin);
 $rozsaszin-szinatmenet: linear-gradient(to bottom right, $rozsaszin-vilagos-szin, $rozsaszin-sotet-szin);
 
@@ -54,9 +54,6 @@ $tp-kicsi: 37.5em; //600 / 16 = 37.5
 }
 .oriasBetu {
   font-size: calc(22px + (45 - 22) * ((100vw - 200px) / (1920 - 200)));
-}
-.page {
-  display: none;
 }
 //Alap beállítások
 *,
