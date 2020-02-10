@@ -161,7 +161,7 @@ function ikerGomb() {
         nyilJobb.style.display = 'block';
         nyilBal.style.display = 'none';
 
-        if (iker2oldal.style.height == '100vh') {
+        if (iker2oldal.style.height == '100%') { //eredetileg 100vh volt (helyesen!)
             iker2oldal.style.alignContent = 'start';
             document.querySelector('main p').style.display = "block";
             document.querySelector('.iker-2 h1').style.marginTop = "7rem";
@@ -251,7 +251,7 @@ if (maxSzel599.matches) {
         } else {
             iker2oldal.style.minHeight = '60rem';
         }
-        iker2oldal.style.height = '100vh';
+        iker2oldal.style.height = '100%';  //eredetileg 100vh volt (helyesen!)
         iker2oldal.style.transition = 'all 0.8s';
         cimNyilEltunik();
         //Megjelenik a tartalom X idő múlva
@@ -471,5 +471,46 @@ for (let i = 0; i < tananyagLink.length; i++) {
             tananyagUres[i].style.display = 'none';
         }
         document.querySelector('.' + name + '-page').style.display = 'grid';
+    });
+}
+
+//Feladatok rész
+//Eltüntetem az összes feladatok osztályú oldalt a TANANYAG oldalról
+const feladatokUres = document.querySelectorAll('.feladatok');
+for (let i = 0; i < feladatokUres.length; i++) {
+    feladatokUres[i].style.display = 'none';
+}
+//Megjelenítem a FEALADATOK oldal 1. napját
+document.querySelector('.nap_01-page').style.display = 'grid';   //////ÁTÍRNI, HA VÉGEZTEM .ora_01-page-re!
+//Kigyűjtöm a FELADATOK linkekhez tartozó oldalakat és a linkre kattintva betöltöm azokat
+const feladatokLink = document.querySelectorAll('.feladatok-link');
+for (let i = 0; i < feladatokLink.length; i++) {
+    feladatokLink[i].addEventListener('click', function (event) {
+        event.preventDefault(); //a kattintásra nem történik semmi ezzel a függvénnyel
+        const name = this.dataset.page;
+        const feladatokUres = document.querySelectorAll('.feladatok');
+        for (let i = 0; i < feladatokUres.length; i++) {
+            feladatokUres[i].style.display = 'none';
+        }
+        document.querySelector('.' + name + '-page').style.display = 'grid';
+    });
+}
+
+//Accordion panel a TANANYAGOK oldalhoz
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.height == "100%") {
+            panel.style.visibility = "hidden";
+            panel.style.height = "0";
+        } else {
+            panel.style.visibility = "visible";
+            panel.style.height = "100%";
+            panel.style.transition = 'all 0.5s';
+        }
     });
 }

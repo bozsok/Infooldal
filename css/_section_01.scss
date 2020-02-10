@@ -4,13 +4,13 @@
   height: 100vh;
   align-content: center;
   justify-items: center;
-  background-image: url("/img/hatter.svg");
+  background-image: url("../img/hatter.svg");
   background-repeat: no-repeat;
   background-position: 45%;
   background-size: cover;
 
   @media only screen and (min-width: $tp-kicsi) {
-    background-image: url("/img/asztalGyerekVirag.svg");
+    background-image: url("../img/asztalGyerekVirag.svg");
     background-position: 35%;
   }
 

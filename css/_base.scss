@@ -75,7 +75,7 @@ h1 {
 }
 p {
   font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
-  line-height: calc(18px + (24 - 18) * ((100vw - 200px) / (1920 - 200)));
+  line-height: calc(21px + (26 - 21) * ((100vw - 200px) / (1920 - 200)));
 }
 //Listaelemek
 ul {
@@ -84,10 +84,16 @@ ul {
   li {
     color: $szin-09;
     width: max-content;
+    font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
+    line-height: calc(21px + (26 - 21) * ((100vw - 200px) / (1920 - 200)));
   }
 }
 ol {
   margin-left: 1rem;
+  li {
+    font-size: calc(14px + (18 - 14) * ((100vw - 200px) / (1920 - 200)));
+  line-height: calc(21px + (26 - 21) * ((100vw - 200px) / (1920 - 200)));
+  }
 }
 //Kiemelés
 span {

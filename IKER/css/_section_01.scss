@@ -36,6 +36,7 @@
     #nyilBal {
       grid-column: 2/3;
       align-self: center;
+      z-index: 5;
 
       @media only screen and (min-width: $tp-nagy) {
         grid-column: 1/2;
@@ -46,6 +47,7 @@
       grid-column: 13/14;
       justify-self: self-end;
       align-self: center;
+      z-index: 5;
 
       @media only screen and (min-width: $tp-nagy) {
         grid-column: 14/15;

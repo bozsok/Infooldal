@@ -83,6 +83,7 @@
       color: $szin-02;
 
       @media only screen and (min-width: $tp-kozepes) {
+        grid-column: 1/10 !important;
         text-align: left;
         margin-bottom: 2rem;
       }
@@ -790,6 +791,8 @@
       grid-column: 1/15;
       white-space: normal;
       position: relative;
+      width: max-content;
+      text-align: center;
 
       @media only screen and (min-width: $tp-kicsi) {
         grid-column: 1/15;
@@ -799,7 +802,7 @@
         justify-self: start;
       }
       @media only screen and (min-width: $tp-nagy) {
-        grid-column: 2/12;
+        //grid-column: 2/12;
       }
 
       &:hover .tooltiptext {
@@ -809,32 +812,43 @@
 
       .tooltiptext {
         position: absolute;
+        background-color: #fff;
+        font-family: "Open Sans", sans-serif;
+        min-width: 35rem;
+        width: 90%;
+        left: -80%;
+        padding: 1rem;
+        bottom: 125%;
+
         visibility: hidden;
         opacity: 0;
-        font-family: "Roboto", sans-serif;
-        max-width: 35rem;
-        width: max-content;
-        left: 0%;
-        padding: 1rem;
-        z-index: 4;
-        background-color: $szin-05;
+        z-index: 1;
+        border: 1px solid $szin-10;
+        transition: opacity 0.3s;
 
         @media only screen and (min-width: $tp-kicsi) {
-          max-width: 55rem;
-          left: -145%;
+          min-width: 55rem;
+          width: 100%;
+          left: -155%;
         }
         @media only screen and (min-width: $tp-kozepes) {
           max-width: 70rem;
-          left: 15%;
+          left: 0%;
           padding: 2rem;
         }
         @media only screen and (min-width: $tp-nagy) {
           max-width: 80rem;
           padding: 3rem;
-          left: 20%;
         }
         &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
           left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: $szin-10 transparent transparent transparent;
           @media only screen and (min-width: $tp-kicsi) {
             left: 50%;
           }

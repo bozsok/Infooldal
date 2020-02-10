@@ -30,6 +30,7 @@
         margin: 1rem 0 !important;
         text-align: center;
         @media only screen and (min-width: $tp-kozepes) {
+            grid-column: 1/10 !important;
             text-align: left !important;
         }
     }
