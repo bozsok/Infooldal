@@ -27,6 +27,7 @@
     font-weight: 700;
   }
   img {
+    display: block !important;
     width: 50%;
     margin: 0 auto !important;
     @media only screen and (min-width: $tp-kozepes) {

@@ -22,27 +22,9 @@ const cimNyil = document.querySelector('.cimNyil');
 const nyilBal = document.querySelector('#nyilBal');
 const nyilJobb = document.querySelector('#nyilJobb');
 const nav = document.querySelector('.nav');
-
 let kep;
-
 let iker = 0; //Ezzel fogjuk szétválasztani a kódot az IKER-1 és IKER-2 oldalakhoz
 
-//Ez ezért kell, hogy gördülékeny legyen a szélesség növelése mindkét hasábnál
-gombIker1.addEventListener('mouseover', function () {
-    iker1oldal.style.zIndex = '2';
-    iker2oldal.style.zIndex = '1';
-    iker = 1;
-    kep = document.querySelector('.iker-1 .kep');
-    console.log('1');
-});
-gombIker2.addEventListener('mouseover', function () {
-    iker2oldal.style.zIndex = '2';
-    iker1oldal.style.zIndex = '1';
-    iker = 2;
-    kep = document.querySelector('.iker-2 .kep');
-    console.log('2');
-});
-//Kiszervezés függvényekbe
 //Navigációs felirat színezése függően IKER-1 vagy IKER-2 oldaltól
 function navSzinezes() {
     const pek = document.querySelectorAll('.nav p');
@@ -51,6 +33,7 @@ function navSzinezes() {
             pek[i].style.color = '#fff';
             pek[i].onmouseover = function () {
                 this.style.color = '#d64c49';
+                this.style.transition = '0.4s';
             }
             pek[i].onmouseout = function () {
                 this.style.color = '#fff';
@@ -59,10 +42,104 @@ function navSzinezes() {
             pek[i].style.color = '#fdc100';
             pek[i].onmouseover = function () {
                 this.style.color = '#4b9074';
+                this.style.transition = '0.4s';
             }
             pek[i].onmouseout = function () {
                 this.style.color = '#fdc100';
             }
+        }
+    }
+}
+//Ez ezért kell, hogy gördülékeny legyen a szélesség növelése mindkét hasábnál
+gombIker1.addEventListener('mouseover', function () {
+    iker1oldal.style.zIndex = '2';
+    iker2oldal.style.zIndex = '1';
+    iker = 1;
+    kep = document.querySelector('.iker-1 .kep');
+    homePageOsszes();
+    informaciokPageOsszes();
+    tananyagPageOsszes();
+    feladatokPageOsszes()
+    felmeroPageOsszes();
+    //Ha kattintok bármelyik órai (1-10) foglalkozáson, és utána VISSZA nyíllal kilépek, akkor újboli visszalépéskor egymáson maradtak a feliratok. Ezzel kiküszöbölöm!
+    let oraOsszes = document.querySelectorAll('.ora');
+    for (let i= 0; i < oraOsszes.length; i++) {
+        oraOsszes[i].style.display = 'none';
+    }
+    //Beállítom, hogy az 1 óra jelenjen meg!
+    document.querySelector('.iker-1 .ora_01-page').style.display = 'grid';
+    //IKER-1 képzésen végrehajtott feladatok kiírása
+    document.querySelector('.iker-1 .nap_01-page').style.display = 'grid';
+});
+gombIker2.addEventListener('mouseover', function () {
+    iker2oldal.style.zIndex = '2';
+    iker1oldal.style.zIndex = '1';
+    iker = 2;
+    kep = document.querySelector('.iker-2 .kep');
+    homePageOsszes();
+    informaciokPageOsszes();
+    tananyagPageOsszes();
+    feladatokPageOsszes()
+    felmeroPageOsszes();
+    //Ha kattintok bármelyik órai (1-10) foglalkozáson, és utána VISSZA nyíllal kilépek, akkor újboli visszalépéskor egymáson maradtak a feliratok. Ezzel kiküszöbölöm!
+    let oraOsszes = document.querySelectorAll('.ora');
+    for (let i = 0; i < oraOsszes.length; i++) {
+        oraOsszes[i].style.display = 'none';
+    }
+    //Beállítom, hogy az első óra jelenjen meg!
+    document.querySelector('.iker-2 .ora_01-page').style.display = 'grid';
+    //IKER-2 képzésen végrehajtott feladatok kiírása    
+    document.querySelector('.iker-2 .nap_01-page').style.display = 'grid';
+});
+//Kiszervezés függvényekbe
+//Mivel 2 egyforma tartalom van függően az IKER-1 vagy IKER-2 oldaltól és csak egyiket mutatja meg, ezért ki kellett gyűjteni az összeset és a megfelelőt hozzárendelni az odavaló oldalhoz.
+function homePageOsszes() {
+    let homePageAll = document.querySelectorAll('.home-page');
+    for (let i = 0; i < homePageAll.length; i++) {
+        if (iker == 1) {
+            homePage = homePageAll[0];
+        } else {
+            homePage = homePageAll[1];
+        }
+    }
+}
+function informaciokPageOsszes() {
+    let informaciokPageAll = document.querySelectorAll('.informaciok-page');
+    for (let i = 0; i < informaciokPageAll.length; i++) {
+        if (iker == 1) {
+            informaciokPage = informaciokPageAll[0];
+        } else {
+            informaciokPage = informaciokPageAll[1];
+        }
+    }
+}
+function tananyagPageOsszes() {
+    let tananyagPageAll = document.querySelectorAll('.tananyag-page');
+    for (let i = 0; i < tananyagPageAll.length; i++) {
+        if (iker == 1) {
+            tananyagPage = tananyagPageAll[0];
+        } else {
+            tananyagPage = tananyagPageAll[1];            
+        }
+    }
+}
+function feladatokPageOsszes() {
+    let feladatokPageAll = document.querySelectorAll('.feladatok-page');
+    for (let i = 0; i < feladatokPageAll.length; i++) {
+        if (iker == 1) {
+            feladatokPage = feladatokPageAll[0];
+        } else {
+            feladatokPage = feladatokPageAll[1];
+        }
+    }
+}
+function felmeroPageOsszes() {
+    let felmeroPageAll = document.querySelectorAll('.felmero-page');
+    for (let i = 0; i < felmeroPageAll.length; i++) {
+        if (iker == 1) {
+            felmeroPage = felmeroPageAll[0];            
+        } else {
+            felmeroPage = felmeroPageAll[1];            
         }
     }
 }
@@ -74,7 +151,6 @@ for (let i = 0; i < pageLink.length; i++) {
         const name = this.dataset.page;
         const pageUres = document.querySelectorAll('.page');
         for (let i = 0; i < pageUres.length; i++) {
-            console.log(pageUres.lenght);
             pageUres[i].style.display = 'none';
         }
         if (iker == 1) {
@@ -89,56 +165,16 @@ function cimNyilEltunik() {
     cimNyil.style.cssText = 'opacity: 0; visibility: hidden'; //be kell állítani, hogy eltünt állapotban se legyen kattintható!!!!
     cimNyil.style.transition = 'all 0.5s'
 }
-function ikerGomb() {    
+function ikerGomb() {  
     navSzinezes();
-    //Mivel 2 egyforma tartalom van függően az IKER-1 vagy IKER-2 oldaltól és csak egyiket mutatja meg, ezért ki kellett gyűjteni az összeset és a megfelelőt hozzárendelni az odavaló oldalhoz.
-    let homePageAll = document.querySelectorAll('.home-page');
-    let homePage = document.querySelector('.home-page')
-    for (let i = 0; i < homePageAll.length; i++) {
-        if (iker == 1) {
-            homePage = homePageAll[0];
-        } else {
-            homePage = homePageAll[1];
-        }        
-    }
-    let informaciokPageAll = document.querySelectorAll('.informaciok-page');
-    let informaciokPage = document.querySelector('.informaciok-page')
-    for (let i = 0; i < informaciokPageAll.length; i++) {
-        if (iker == 1) {
-            informaciokPage = informaciokPageAll[0];
-        } else {
-            informaciokPage = informaciokPageAll[1];
-        }
-    }
-    let tananyagPageAll = document.querySelectorAll('.tananyag-page');
-    let tananyagPage = document.querySelector('.tananyag-page')
-    for (let i = 0; i < tananyagPageAll.length; i++) {
-        if (iker == 1) {
-            tananyagPage = tananyagPageAll[0];
-        } else {
-            tananyagPage = tananyagPageAll[1];
-        }
-    }
-    let feladatokPageAll = document.querySelectorAll('.feladatok-page');
-    let feladatokPage = document.querySelector('.feladatok-page')
-    for (let i = 0; i < feladatokPageAll.length; i++) {
-        if (iker == 1) {
-            feladatokPage = feladatokPageAll[0];
-        } else {
-            feladatokPage = feladatokPageAll[1];
-        }
-    }
     //Ha az IKER-1 gomra kattintunk...
     if (iker == 1) {
         homePage.style.display = 'grid';
-        informaciokPage.style.display = 'none';
-        tananyagPage.style.display = 'none';
-        feladatokPage.style.display = 'none';
 
         nav.style.display = 'grid';
         nyilBal.style.display = 'block'
         nyilJobb.style.display = 'none';
-
+        
         if (iker1oldal.style.height == '100%') {
             iker1oldal.style.alignContent = 'start';
             document.querySelector('main p').style.display = "block";
@@ -153,9 +189,6 @@ function ikerGomb() {
     //Ha az IKER-2 gombra kattintunk
     else {
         homePage.style.display = 'grid';
-        informaciokPage.style.display = 'none';
-        tananyagPage.style.display = 'none';
-        feladatokPage.style.display = 'none';
 
         nav.style.display = 'grid';
         nyilJobb.style.display = 'block';
@@ -174,23 +207,11 @@ function ikerGomb() {
     }
 }
 function visszaGomb() {
-    let osszesHome = document.querySelectorAll('.home-page');
-    for (let i = 0; i < osszesHome.length; i++) {
-        osszesHome[i].style.display = 'none';
-    }
-    let osszesInformaciok = document.querySelectorAll('.informaciok-page');
-    for (let i = 0; i < osszesInformaciok.length; i++) {
-        osszesInformaciok[i].style.display = 'none';
-    }
-    let osszesTananyag = document.querySelectorAll('.tananyag-page');
-    for (let i = 0; i < osszesTananyag.length; i++) {
-        osszesTananyag[i].style.display = 'none';
-    }
-    let osszesFeladatok = document.querySelectorAll('.feladatok-page');
-    for(let i = 0; i < osszesFeladatok.length; i++) {
-        osszesFeladatok[i].style.display = 'none';
-    };
-
+    homePage.style.display = 'none';
+    informaciokPage.style.display = 'none';
+    tananyagPage.style.display = 'none';
+    feladatokPage.style.display = 'none';
+    felmeroPage.style.display = 'none';
     //tartalom eltűnik
     if (iker == 1) {
         document.querySelector('main p').style.display = "none";
@@ -214,12 +235,12 @@ function visszaGomb() {
 
 //Az oldalon a hasábok mozgása 600px alatt és felette
 //muszáj volt max-width-del megoldani!!!
-let maxSzel399 = window.matchMedia("(max-width: 399px)");
-let maxSzel599 = window.matchMedia("(max-width: 599px");
-let maxSzel899 = window.matchMedia("(max-width: 899px)");
-let maxSzel1199 = window.matchMedia("(max-width: 1199px)");
-let maxSzel1799 = window.matchMedia("(max-width: 1799px)");
-let minSzel1800 = window.matchMedia("(min-width: 1800px)");
+const maxSzel399 = window.matchMedia("(max-width: 399px)");
+const maxSzel599 = window.matchMedia("(max-width: 599px");
+const maxSzel899 = window.matchMedia("(max-width: 899px)");
+const maxSzel1199 = window.matchMedia("(max-width: 1199px)");
+const maxSzel1799 = window.matchMedia("(max-width: 1799px)");
+const minSzel1800 = window.matchMedia("(min-width: 1800px)");
 
 //600px alatti változások
 if (maxSzel599.matches) {
@@ -458,8 +479,6 @@ const tananyagUres = document.querySelectorAll('.tananyag');
 for (let i = 0; i < tananyagUres.length; i++) {
     tananyagUres[i].style.display = 'none';
 }
-//Megjelenítem a TANANYAG oldal 1. óráját
-document.querySelector('.ora_01-page').style.display = 'grid';   //////ÁTÍRNI, HA VÉGEZTEM .ora_01-page-re!
 //Kigyűjtöm a TANANYAG linkekhez tartozó oldalakat és a linkre kattintva betöltöm azokat
 const tananyagLink = document.querySelectorAll('.tananyag-link');
 for (let i = 0; i < tananyagLink.length; i++) {
@@ -470,18 +489,19 @@ for (let i = 0; i < tananyagLink.length; i++) {
         for (let i = 0; i < tananyagUres.length; i++) {
             tananyagUres[i].style.display = 'none';
         }
-        document.querySelector('.' + name + '-page').style.display = 'grid';
+        if (iker == 1) {
+            document.querySelector('.iker-1 .' + name + '-page').style.display = 'grid';
+        } else {
+            document.querySelector('.iker-2 .' + name + '-page').style.display = 'grid';
+        }        
     });
 }
-
 //Feladatok rész
 //Eltüntetem az összes feladatok osztályú oldalt a FELADATOK oldalról
 const feladatokUres = document.querySelectorAll('.feladatok');
 for (let i = 0; i < feladatokUres.length; i++) {
     feladatokUres[i].style.display = 'none';
 }
-//Megjelenítem a FEALADATOK oldal 1. napját
-document.querySelector('.nap_01-page').style.display = 'grid';   //////ÁTÍRNI, HA VÉGEZTEM .ora_01-page-re!
 //Kigyűjtöm a FELADATOK linkekhez tartozó oldalakat és a linkre kattintva betöltöm azokat
 const feladatokLink = document.querySelectorAll('.feladatok-link');
 for (let i = 0; i < feladatokLink.length; i++) {
@@ -492,7 +512,11 @@ for (let i = 0; i < feladatokLink.length; i++) {
         for (let i = 0; i < feladatokUres.length; i++) {
             feladatokUres[i].style.display = 'none';
         }
-        document.querySelector('.' + name + '-page').style.display = 'grid';
+        if (iker == 1) {
+            document.querySelector('.iker-1 .' + name + '-page').style.display = 'grid';
+        } else {
+            document.querySelector('.iker-2 .' + name + '-page').style.display = 'grid';
+        }
     });
 }
 
@@ -515,7 +539,3 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-//Felmérő rész
-//Eltüntetem a felmero osztályú oldalt
-const felmeroUres = document.querySelector('.felmero');
-felmeroUres.style.display = 'none';

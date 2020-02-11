@@ -1,4 +1,199 @@
 //Feladatok oldal IKER-2
-.main {
+.main_07 {
+    //A képzésen vgérehajtott feladatok felirat
+  h1 {
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10 !important;
+      text-align: left !important;
+    }
+  }
+  //1-5. nap felirat
+  ul {
+    grid-column: 1/15;
+    grid-row: 2/3;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 1px solid $szin-08;
 
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10;
+      justify-content: start;
+    }
+    @media only screen and (min-width: $tp-nagy) {
+      grid-column: 1/11;
+    }
+
+    display: flex;
+
+    li {
+      cursor: pointer;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+
+      &:hover {
+        color: $szin-04;
+      }
+      @media only screen and (min-width: $tp-kicsi) {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+      @media only screen and (min-width: $tp-kozepes) {
+        &:not(:last-child) {
+          margin-right: 3rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  //Konkrét órai oldalak összefoglaló jellemzői
+  .ora {
+    grid-column: 1/15;
+    grid-row: 3/4;
+
+    display: grid;
+    grid-template-columns:
+      minmax(0rem, 1fr) repeat(12, minmax(min-content, 10rem))
+      minmax(0rem, 1fr);
+
+    h2 {
+      grid-column: 1/15;
+      grid-row: 1/2;
+      margin-bottom: 1rem;
+      min-height: 0;
+      text-align: center;
+      color: $szin-02;
+
+      @media only screen and (min-width: $tp-kozepes) {
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+    }
+    h3 {
+      grid-column: 1/15;
+      margin: 1rem 0;
+      text-align: center;
+      font-weight: 300;
+
+      @media only screen and (min-width: $tp-kozepes) {
+        text-align: left;
+        margin-top: 2rem;
+      }
+    }
+    p {
+      grid-column: 1/15;
+      margin-top: 0 !important;
+      padding: 0 !important;
+    }
+    img {
+      grid-column: 1/15;
+      display: block;
+      width: 100%;
+      justify-self: center;
+
+      @media only screen and (min-width: $tp-kozepes) {
+        justify-self: self-start;
+      }
+    }
+    ol {
+      grid-column: 1/15;
+      padding: 1rem 0;
+      margin-left: 3rem;
+    }
+  }
+  //Lenyíló rész beállításai
+  .accordion {
+    grid-column: 1/15;
+    margin-bottom: 1rem;
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10;
+    }
+    @media only screen and (min-width: $tp-nagy) {
+      grid-column: 1/11;
+    }
+    background-color: $szin-05;
+    cursor: pointer;
+    padding: 1.6rem;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+
+    &:active,
+    &:hover {
+      background-color: $szin-06;
+    }
+
+    &:after {
+      content: "\002B";
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    p {
+      display: inline-block;
+      text-align: center;
+      @media only screen and (min-width: 960px) {
+        max-width: 100%;
+      }
+    }
+  }
+  //mínusz jel beállítása, ha kinyitva van
+  .active:after {
+    content: "\2212";
+  }
+  //Lenyíló rész tartalma beállításai
+  .panel {
+    grid-column: 1/15;
+    width: 100%;
+    height: 0;
+
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10;
+      align-items: flex-start;
+    }
+    @media only screen and (min-width: $tp-nagy) {
+      grid-column: 1/11;
+    }
+    visibility: hidden;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin: 0 0 1.5rem 0;
+      @media only screen and (min-width: $tp-kozepes) {
+        max-width: 100%;
+      }
+    }
+    .btn-02 {
+      margin: 0;
+    }
+    img {
+      max-width: max-content;
+      width: 50%;
+    }
+  }
+  .tartalom {
+    column-count: 2;
+    column-gap: 10rem;
+    text-align: left;
+
+    @media only screen and (min-width: $tp-kicsi) {
+      column-count: 3;
+      column-gap: 7rem;
+      margin-left: 3rem;
+    }
+    @media only screen and (min-width: $tp-kozepes) {
+      column-count: 3;
+      margin-left: 2rem !important;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
 }

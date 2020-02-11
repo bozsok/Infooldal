@@ -2782,6 +2782,7 @@ button:hover {
 }
 
 .main_04 img {
+  display: block !important;
   width: 50%;
   margin: 0 auto !important;
 }
@@ -2837,6 +2838,305 @@ button:hover {
 
 .main_04 .felmero__szamozas .felmero__kerdesek {
   margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 h1 {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 9 !important;
+    grid-column: 1/10 !important;
+    text-align: left !important;
+  }
+}
+
+.main_07 ul {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  border-bottom: 1px solid #6f85b4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 ul {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-column: 1/10;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .main_07 ul {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1/11;
+  }
+}
+
+.main_07 ul li {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.main_07 ul li:hover {
+  color: #d64c49;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .main_07 ul li:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 ul li:not(:last-child) {
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.main_07 .ora {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0rem, 1fr) (minmax(min-content, 10rem))[12] minmax(0rem, 1fr);
+      grid-template-columns: minmax(0rem, 1fr) repeat(12, minmax(-webkit-min-content, 10rem)) minmax(0rem, 1fr);
+      grid-template-columns: minmax(0rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(0rem, 1fr);
+}
+
+.main_07 .ora h2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin-bottom: 1rem;
+  min-height: 0;
+  text-align: center;
+  color: #f18a00;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .ora h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+}
+
+.main_07 .ora h3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .ora h3 {
+    text-align: left;
+    margin-top: 2rem;
+  }
+}
+
+.main_07 .ora p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+.main_07 .ora img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  display: block;
+  width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .ora img {
+    -ms-grid-column-align: self-start;
+        justify-self: self-start;
+  }
+}
+
+.main_07 .ora ol {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  padding: 1rem 0;
+  margin-left: 3rem;
+}
+
+.main_07 .accordion {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  margin-bottom: 1rem;
+  background-color: #e2e8f6;
+  cursor: pointer;
+  padding: 1.6rem;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .accordion {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-column: 1/10;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .main_07 .accordion {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1/11;
+  }
+}
+
+.main_07 .accordion:active, .main_07 .accordion:hover {
+  background-color: #c0ceeb;
+}
+
+.main_07 .accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.main_07 .accordion p {
+  display: inline-block;
+  text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+  .main_07 .accordion p {
+    max-width: 100%;
+  }
+}
+
+.main_07 .active:after {
+  content: "\2212";
+}
+
+.main_07 .panel {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .panel {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-column: 1/10;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .main_07 .panel {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1/11;
+  }
+}
+
+.main_07 .panel p {
+  margin: 0 0 1.5rem 0;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .panel p {
+    max-width: 100%;
+  }
+}
+
+.main_07 .panel .btn-02 {
+  margin: 0;
+}
+
+.main_07 .panel img {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 50%;
+}
+
+.main_07 .tartalom {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 10rem;
+          column-gap: 10rem;
+  text-align: left;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .main_07 .tartalom {
+    -webkit-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 7rem;
+            column-gap: 7rem;
+    margin-left: 3rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_07 .tartalom {
+    -webkit-column-count: 3;
+            column-count: 3;
+    margin-left: 2rem !important;
+  }
+}
+
+.main_07 .tartalom span {
+  font-weight: 700;
 }
 
 .main_08 {
