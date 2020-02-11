@@ -475,7 +475,7 @@ for (let i = 0; i < tananyagLink.length; i++) {
 }
 
 //Feladatok rész
-//Eltüntetem az összes feladatok osztályú oldalt a TANANYAG oldalról
+//Eltüntetem az összes feladatok osztályú oldalt a FELADATOK oldalról
 const feladatokUres = document.querySelectorAll('.feladatok');
 for (let i = 0; i < feladatokUres.length; i++) {
     feladatokUres[i].style.display = 'none';
@@ -514,3 +514,8 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+//Felmérő rész
+//Eltüntetem a felmero osztályú oldalt
+const felmeroUres = document.querySelector('.felmero');
+felmeroUres.style.display = 'none';

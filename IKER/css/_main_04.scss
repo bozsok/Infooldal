@@ -1,0 +1,63 @@
+//Felmérő oldal IKER-1
+.main_04 {
+  h1 {
+    grid-column: 1/15 !important;
+    margin-top: 2rem;
+
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10 !important;
+      justify-self: self-start !important;
+    }
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10;
+      justify-self: center;
+      margin-top: 2rem;
+    }
+  }
+
+  p {
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 2/10;
+      grid-row: 2/3;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  span {
+    font-weight: 700;
+  }
+  img {
+    width: 50%;
+    margin: 0 auto !important;
+    @media only screen and (min-width: $tp-kozepes) {
+      margin: 0 0 2rem 0 !important;
+      width: 40%;
+    }
+  }
+  .felmero__szoveg {
+    padding: 0 !important;
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10 !important;
+    }
+    @media only screen and (min-width: $tp-nagy) {
+      grid-column: 1/11 !important;
+    }
+  }
+  .felmero__szamozas {
+    padding: 2rem;
+    grid-row: 3/4;
+    grid-column: 1/15;
+    text-align: center;
+
+    @media only screen and (min-width: $tp-kozepes) {
+      grid-column: 1/10 !important;
+      justify-self: self-start !important;
+      text-align: left;
+    }
+    .felmero__kerdesek {
+      margin-bottom: 2rem;
+    }
+    .felmero__idezet {
+    }
+  }
+}

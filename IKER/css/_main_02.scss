@@ -1,4 +1,5 @@
-.section_03 {
+//Tananyag oldal
+.main_02 {
   //1-10 óra kiírás
   ul {
     grid-column: 1/15;
@@ -64,6 +65,9 @@
     @media only screen and (min-width: $tp-kozepes) {
       grid-column: 1/10 !important;
       text-align: left !important;
+    }
+    @media only screen and (min-width: $tp-nagy) {
+      grid-column: 1/11 !important;
     }
   }
   //Konkrét órai oldalak összefoglaló jellemzői
@@ -792,6 +796,7 @@
       white-space: normal;
       position: relative;
       width: max-content;
+      justify-self: center;
       text-align: center;
 
       @media only screen and (min-width: $tp-kicsi) {

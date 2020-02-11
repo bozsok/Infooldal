@@ -752,35 +752,35 @@ button:hover {
   background-color: #4b9074;
 }
 
-.section_02 > h2 {
+.main_01 > h2 {
   font-weight: 300;
 }
 
-.section_02 ul li {
+.main_01 ul li {
   width: 100%;
   max-width: 120rem;
 }
 
-.section_02 h2,
-.section_02 h3,
-.section_02 p {
+.main_01 h2,
+.main_01 h3,
+.main_01 p {
   margin: 0 !important;
   padding: 0 !important;
   color: #111538 !important;
 }
 
-.section_02 h2 {
+.main_01 h2 {
   min-height: 0 !important;
   margin: 3rem 0 1rem !important;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_02 h2 {
+  .main_01 h2 {
     text-align: left !important;
   }
 }
 
-.section_02 h3 {
+.main_01 h3 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -789,7 +789,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_02 h3 {
+  .main_01 h3 {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -797,14 +797,14 @@ button:hover {
   }
 }
 
-.section_02 h1:nth-child(1) {
+.main_01 h1:nth-child(1) {
   -ms-grid-row: 1 !important;
   -ms-grid-row-span: 1 !important;
   grid-row: 1/2 !important;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_02 h1 {
+  .main_01 h1 {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -812,14 +812,14 @@ button:hover {
   }
 }
 
-.section_02 h2:nth-child(2) {
+.main_01 h2:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_02 h2 {
+  .main_01 h2 {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -827,31 +827,31 @@ button:hover {
   }
 }
 
-.section_02 h3:nth-child(3) {
+.main_01 h3:nth-child(3) {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
-.section_02 p:nth-child(4) {
+.main_01 p:nth-child(4) {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
 }
 
-.section_02 p:nth-child(5) {
+.main_01 p:nth-child(5) {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5/6;
 }
 
-.section_02 h2:nth-child(6) {
+.main_01 h2:nth-child(6) {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6/7;
 }
 
-.section_02 ul:nth-child(7) {
+.main_01 ul:nth-child(7) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -862,7 +862,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_02 ul {
+  .main_01 ul {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -870,13 +870,13 @@ button:hover {
   }
 }
 
-.section_02 h2:nth-child(8) {
+.main_01 h2:nth-child(8) {
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
   grid-row: 8/9;
 }
 
-.section_02 ul:nth-child(9) {
+.main_01 ul:nth-child(9) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -886,13 +886,13 @@ button:hover {
   text-align: center;
 }
 
-.section_02 h2:nth-child(10) {
+.main_01 h2:nth-child(10) {
   -ms-grid-row: 10;
   -ms-grid-row-span: 1;
   grid-row: 10/11;
 }
 
-.section_02 ul:nth-child(11) {
+.main_01 ul:nth-child(11) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -902,13 +902,13 @@ button:hover {
   text-align: center;
 }
 
-.section_02 h2:nth-child(12) {
+.main_01 h2:nth-child(12) {
   -ms-grid-row: 12;
   -ms-grid-row-span: 1;
   grid-row: 12/13;
 }
 
-.section_02 ul:nth-child(13) {
+.main_01 ul:nth-child(13) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -918,13 +918,13 @@ button:hover {
   text-align: center;
 }
 
-.section_02 h2:nth-child(14) {
+.main_01 h2:nth-child(14) {
   -ms-grid-row: 14;
   -ms-grid-row-span: 1;
   grid-row: 14/15;
 }
 
-.section_02 ul:nth-child(15) {
+.main_01 ul:nth-child(15) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -934,13 +934,13 @@ button:hover {
   text-align: center;
 }
 
-.section_02 h2:nth-child(16) {
+.main_01 h2:nth-child(16) {
   -ms-grid-row: 16;
   -ms-grid-row-span: 1;
   grid-row: 16/17;
 }
 
-.section_02 ol:nth-child(17) {
+.main_01 ol:nth-child(17) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -957,7 +957,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_02 ol {
+  .main_01 ol {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -968,7 +968,7 @@ button:hover {
   }
 }
 
-.section_03 ul {
+.main_02 ul {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -984,7 +984,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 37.5em) {
-  .section_03 ul {
+  .main_02 ul {
     -ms-grid-column: 2;
     -ms-grid-column-span: 12;
     grid-column: 2/14;
@@ -994,14 +994,14 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 ul {
+  .main_02 ul {
     -ms-grid-column: 2;
     -ms-grid-column-span: 12;
     grid-column: 2/14;
   }
 }
 
-.section_03 ul li {
+.main_02 ul li {
   cursor: pointer;
   margin-bottom: 1rem;
   text-align: center;
@@ -1012,41 +1012,41 @@ button:hover {
   width: min-content;
 }
 
-.section_03 ul li:not(:last-child) {
+.main_02 ul li:not(:last-child) {
   margin-right: 3vw;
 }
 
 @media only screen and (min-width: 37.5em) {
-  .section_03 ul li {
+  .main_02 ul li {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
-  .section_03 ul li:not(:last-child) {
+  .main_02 ul li:not(:last-child) {
     margin-right: 1rem;
   }
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 ul li:not(:last-child) {
+  .main_02 ul li:not(:last-child) {
     margin-right: 3rem;
     margin-bottom: 2rem;
   }
 }
 
-.section_03 ul li:hover {
+.main_02 ul li:hover {
   color: #d64c49;
   font-weight: 700;
 }
 
-.section_03 h1:nth-child(1) {
+.main_02 h1:nth-child(1) {
   -ms-grid-row: 1 !important;
   -ms-grid-row-span: 1 !important;
   grid-row: 1/2 !important;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 h1 {
+  .main_02 h1 {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -1054,14 +1054,14 @@ button:hover {
   }
 }
 
-.section_03 ul:nth-child(2) {
+.main_02 ul:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 ul {
+  .main_02 ul {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -1069,7 +1069,15 @@ button:hover {
   }
 }
 
-.section_03 .ora {
+@media only screen and (min-width: 75em) {
+  .main_02 ul {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 10 !important;
+    grid-column: 1/11 !important;
+  }
+}
+
+.main_02 .ora {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -1083,7 +1091,7 @@ button:hover {
       grid-template-columns: minmax(0rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(0rem, 1fr);
 }
 
-.section_03 .ora h2 {
+.main_02 .ora h2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -1093,7 +1101,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 .ora h2 {
+  .main_02 .ora h2 {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -1102,7 +1110,7 @@ button:hover {
   }
 }
 
-.section_03 .ora h3 {
+.main_02 .ora h3 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -1112,13 +1120,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 .ora h3 {
+  .main_02 .ora h3 {
     text-align: left;
     margin-top: 2rem;
   }
 }
 
-.section_03 .ora p {
+.main_02 .ora p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -1126,7 +1134,7 @@ button:hover {
   padding: 0 !important;
 }
 
-.section_03 .ora img {
+.main_02 .ora img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -1137,13 +1145,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 .ora img {
+  .main_02 .ora img {
     -ms-grid-column-align: self-start;
         justify-self: self-start;
   }
 }
 
-.section_03 .ora ol {
+.main_02 .ora ol {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -1153,13 +1161,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_03 .ora ol {
+  .main_02 .ora ol {
     margin-bottom: 3rem;
   }
 }
 
 @media only screen and (min-width: 75em) {
-  .section_03 .ora ol {
+  .main_02 .ora ol {
     margin-bottom: 4rem;
   }
 }
@@ -2248,6 +2256,8 @@ button:hover {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  -ms-grid-column-align: center;
+      justify-self: center;
   text-align: center;
 }
 
@@ -2337,7 +2347,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 h1 {
+  .main_03 h1 {
     -ms-grid-column: 1 !important;
     -ms-grid-column-span: 9 !important;
     grid-column: 1/10 !important;
@@ -2345,7 +2355,7 @@ button:hover {
   }
 }
 
-.section_04 ul {
+.main_03 ul {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2364,7 +2374,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 ul {
+  .main_03 ul {
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
     grid-column: 1/10;
@@ -2374,30 +2384,38 @@ button:hover {
   }
 }
 
-.section_04 ul li {
+@media only screen and (min-width: 75em) {
+  .main_03 ul {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1/11;
+  }
+}
+
+.main_03 ul li {
   cursor: pointer;
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
 
-.section_04 ul li:hover {
+.main_03 ul li:hover {
   color: #d64c49;
 }
 
 @media only screen and (min-width: 37.5em) {
-  .section_04 ul li:not(:last-child) {
+  .main_03 ul li:not(:last-child) {
     margin-right: 2rem;
   }
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 ul li:not(:last-child) {
+  .main_03 ul li:not(:last-child) {
     margin-right: 3rem;
     margin-bottom: 2rem;
   }
 }
 
-.section_04 .ora {
+.main_03 .ora {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2411,7 +2429,7 @@ button:hover {
       grid-template-columns: minmax(0rem, 1fr) repeat(12, minmax(min-content, 10rem)) minmax(0rem, 1fr);
 }
 
-.section_04 .ora h2 {
+.main_03 .ora h2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2425,13 +2443,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .ora h2 {
+  .main_03 .ora h2 {
     text-align: left;
     margin-bottom: 2rem;
   }
 }
 
-.section_04 .ora h3 {
+.main_03 .ora h3 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2441,13 +2459,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .ora h3 {
+  .main_03 .ora h3 {
     text-align: left;
     margin-top: 2rem;
   }
 }
 
-.section_04 .ora p {
+.main_03 .ora p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2455,7 +2473,7 @@ button:hover {
   padding: 0 !important;
 }
 
-.section_04 .ora img {
+.main_03 .ora img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2466,13 +2484,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .ora img {
+  .main_03 .ora img {
     -ms-grid-column-align: self-start;
         justify-self: self-start;
   }
 }
 
-.section_04 .ora ol {
+.main_03 .ora ol {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2480,7 +2498,7 @@ button:hover {
   margin-left: 3rem;
 }
 
-.section_04 .accordion {
+.main_03 .accordion {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2495,18 +2513,26 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .accordion {
+  .main_03 .accordion {
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
     grid-column: 1/10;
   }
 }
 
-.section_04 .accordion:active, .section_04 .accordion:hover {
+@media only screen and (min-width: 75em) {
+  .main_03 .accordion {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1/11;
+  }
+}
+
+.main_03 .accordion:active, .main_03 .accordion:hover {
   background-color: #c0ceeb;
 }
 
-.section_04 .accordion:after {
+.main_03 .accordion:after {
   content: "\002B";
   color: #777;
   font-weight: bold;
@@ -2514,22 +2540,22 @@ button:hover {
   margin-left: 5px;
 }
 
-.section_04 .accordion p {
+.main_03 .accordion p {
   display: inline-block;
   text-align: center;
 }
 
 @media only screen and (min-width: 960px) {
-  .section_04 .accordion p {
+  .main_03 .accordion p {
     max-width: 100%;
   }
 }
 
-.section_04 .active:after {
+.main_03 .active:after {
   content: "\2212";
 }
 
-.section_04 .panel {
+.main_03 .panel {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
@@ -2550,7 +2576,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .panel {
+  .main_03 .panel {
     -ms-grid-column: 1;
     -ms-grid-column-span: 9;
     grid-column: 1/10;
@@ -2560,28 +2586,36 @@ button:hover {
   }
 }
 
-.section_04 .panel p {
+@media only screen and (min-width: 75em) {
+  .main_03 .panel {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 10;
+    grid-column: 1/11;
+  }
+}
+
+.main_03 .panel p {
   margin: 0 0 1.5rem 0;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .panel p {
+  .main_03 .panel p {
     max-width: 100%;
   }
 }
 
-.section_04 .panel .btn-02 {
+.main_03 .panel .btn-02 {
   margin: 0;
 }
 
-.section_04 .panel img {
+.main_03 .panel img {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   width: 50%;
 }
 
-.section_04 .tartalom {
+.main_03 .tartalom {
   -webkit-column-count: 2;
           column-count: 2;
   -webkit-column-gap: 10rem;
@@ -2590,7 +2624,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 37.5em) {
-  .section_04 .tartalom {
+  .main_03 .tartalom {
     -webkit-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 7rem;
@@ -2600,18 +2634,18 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .tartalom {
+  .main_03 .tartalom {
     -webkit-column-count: 3;
             column-count: 3;
     margin-left: 2rem !important;
   }
 }
 
-.section_04 .tartalom span {
+.main_03 .tartalom span {
   font-weight: 700;
 }
 
-.section_04 .tooltip {
+.main_03 .tooltip {
   white-space: normal;
   position: relative;
   width: -webkit-max-content;
@@ -2622,18 +2656,18 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .tooltip {
+  .main_03 .tooltip {
     text-align: left;
     margin: 0;
   }
 }
 
-.section_04 .tooltip:hover .tooltiptext {
+.main_03 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
 
-.section_04 .tooltip .tooltiptext {
+.main_03 .tooltip .tooltiptext {
   position: absolute;
   padding: 1rem;
   width: -webkit-max-content;
@@ -2655,7 +2689,7 @@ button:hover {
   transition: opacity 0.3s;
 }
 
-.section_04 .tooltip .tooltiptext::after {
+.main_03 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -2667,52 +2701,155 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .tooltip .tooltiptext::after {
+  .main_03 .tooltip .tooltiptext::after {
     left: 15%;
   }
 }
 
-.section_04 .tooltip .bicikli {
+.main_03 .tooltip .bicikli {
   left: -100%;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .tooltip .bicikli {
+  .main_03 .tooltip .bicikli {
     left: 0%;
   }
 }
 
-.section_04 .tooltip .dino {
+.main_03 .tooltip .dino {
   left: -100%;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .tooltip .dino {
+  .main_03 .tooltip .dino {
     left: 0%;
   }
 }
 
-.section_04 .tooltip .beka {
+.main_03 .tooltip .beka {
   left: -70%;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_04 .tooltip .beka {
+  .main_03 .tooltip .beka {
     left: 0%;
   }
 }
 
-.section_07 {
+.main_04 h1 {
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 14 !important;
+  grid-column: 1/15 !important;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_04 h1 {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 9 !important;
+    grid-column: 1/10 !important;
+    -ms-grid-column-align: self-start !important;
+        justify-self: self-start !important;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_04 h1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-column: 1/10;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_04 p {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 8;
+    grid-column: 2/10;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.main_04 span {
+  font-weight: 700;
+}
+
+.main_04 img {
+  width: 50%;
+  margin: 0 auto !important;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_04 img {
+    margin: 0 0 2rem 0 !important;
+    width: 40%;
+  }
+}
+
+.main_04 .felmero__szoveg {
+  padding: 0 !important;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_04 .felmero__szoveg {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 9 !important;
+    grid-column: 1/10 !important;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .main_04 .felmero__szoveg {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 10 !important;
+    grid-column: 1/11 !important;
+  }
+}
+
+.main_04 .felmero__szamozas {
+  padding: 2rem;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 14;
+  grid-column: 1/15;
+  text-align: center;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .main_04 .felmero__szamozas {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 9 !important;
+    grid-column: 1/10 !important;
+    -ms-grid-column-align: self-start !important;
+        justify-self: self-start !important;
+    text-align: left;
+  }
+}
+
+.main_04 .felmero__szamozas .felmero__kerdesek {
+  margin-bottom: 2rem;
+}
+
+.main_08 {
   height: 100%;
 }
 
-.section_07 h1 {
+.main_08 h1 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
 }
 
-.section_07 h2 {
+.main_08 h2 {
   -ms-grid-column: 1 !important;
   -ms-grid-column-span: 14 !important;
   grid-column: 1/15 !important;
@@ -2720,11 +2857,11 @@ button:hover {
   min-height: 0 !important;
 }
 
-.section_07 p {
+.main_08 p {
   font-weight: 300;
 }
 
-.section_07 ol {
+.main_08 ol {
   width: 90%;
   max-width: 120rem;
   -ms-grid-column: 1;
@@ -2734,7 +2871,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 37.5em) {
-  .section_07 ol {
+  .main_08 ol {
     -ms-grid-column: 2;
     -ms-grid-column-span: 12;
     grid-column: 2/14;
@@ -2743,44 +2880,44 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_07 ol {
+  .main_08 ol {
     -ms-grid-column: 2;
     -ms-grid-column-span: 9;
     grid-column: 2/11;
   }
 }
 
-.section_07 ol li {
+.main_08 ol li {
   font-weight: 300;
 }
 
-.section_07 h1:nth-child(1) {
+.main_08 h1:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_07 h1:nth-child(1) {
+  .main_08 h1:nth-child(1) {
     -ms-grid-column-align: self-start;
         justify-self: self-start;
   }
 }
 
-.section_07 h2:nth-child(3) {
+.main_08 h2:nth-child(3) {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_07 h2:nth-child(3) {
+  .main_08 h2:nth-child(3) {
     -ms-grid-column-align: self-start;
         justify-self: self-start;
   }
 }
 
-.section_07 p:nth-child(2) {
+.main_08 p:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -2788,7 +2925,7 @@ button:hover {
 }
 
 @media only screen and (min-width: 56.25em) {
-  .section_07 p:nth-child(2) {
+  .main_08 p:nth-child(2) {
     -ms-grid-column-align: self-start;
         justify-self: self-start;
   }
