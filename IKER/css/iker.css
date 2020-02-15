@@ -1114,7 +1114,7 @@ button:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 14;
   grid-column: 1/15;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
   text-align: center;
   font-weight: 300;
 }
@@ -1220,6 +1220,12 @@ button:hover {
   grid-row: 19/20;
 }
 
+.ora_01-page h3:nth-child(22) {
+  -ms-grid-row: 22;
+  -ms-grid-row-span: 1;
+  grid-row: 22/23;
+}
+
 .ora_01-page p:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -1281,6 +1287,13 @@ button:hover {
   grid-row: 20/21;
 }
 
+.ora_01-page p:nth-child(23) {
+  -ms-grid-row: 23;
+  -ms-grid-row-span: 1;
+  grid-row: 23/24;
+  margin-bottom: 4rem;
+}
+
 .ora_01-page img:nth-child(11) {
   -ms-grid-row: 11;
   -ms-grid-row-span: 1;
@@ -1292,6 +1305,13 @@ button:hover {
   -ms-grid-row: 15;
   -ms-grid-row-span: 1;
   grid-row: 15/16;
+}
+
+.ora_01-page ol:nth-child(21) {
+  -ms-grid-row: 21;
+  -ms-grid-row-span: 1;
+  grid-row: 21/22;
+  margin-bottom: 0;
 }
 
 .ora_02-page h2:nth-child(1) {
@@ -2838,6 +2858,14 @@ button:hover {
 
 .main_04 .felmero__szamozas .felmero__kerdesek {
   margin-bottom: 2rem;
+}
+
+.main_06 .ora_01-page p:nth-child(20) {
+  margin-bottom: 4rem;
+}
+
+.main_06 .ora_01-page ol {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 56.25em) {

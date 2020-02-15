@@ -63,7 +63,7 @@ gombIker1.addEventListener('mouseover', function () {
     felmeroPageOsszes();
     //Ha kattintok bármelyik órai (1-10) foglalkozáson, és utána VISSZA nyíllal kilépek, akkor újboli visszalépéskor egymáson maradtak a feliratok. Ezzel kiküszöbölöm!
     let oraOsszes = document.querySelectorAll('.ora');
-    for (let i= 0; i < oraOsszes.length; i++) {
+    for (let i = 0; i < oraOsszes.length; i++) {
         oraOsszes[i].style.display = 'none';
     }
     //Beállítom, hogy az 1 óra jelenjen meg!
@@ -119,7 +119,7 @@ function tananyagPageOsszes() {
         if (iker == 1) {
             tananyagPage = tananyagPageAll[0];
         } else {
-            tananyagPage = tananyagPageAll[1];            
+            tananyagPage = tananyagPageAll[1];
         }
     }
 }
@@ -137,9 +137,9 @@ function felmeroPageOsszes() {
     let felmeroPageAll = document.querySelectorAll('.felmero-page');
     for (let i = 0; i < felmeroPageAll.length; i++) {
         if (iker == 1) {
-            felmeroPage = felmeroPageAll[0];            
+            felmeroPage = felmeroPageAll[0];
         } else {
-            felmeroPage = felmeroPageAll[1];            
+            felmeroPage = felmeroPageAll[1];
         }
     }
 }
@@ -165,7 +165,7 @@ function cimNyilEltunik() {
     cimNyil.style.cssText = 'opacity: 0; visibility: hidden'; //be kell állítani, hogy eltünt állapotban se legyen kattintható!!!!
     cimNyil.style.transition = 'all 0.5s'
 }
-function ikerGomb() {  
+function ikerGomb() {
     navSzinezes();
     //Ha az IKER-1 gomra kattintunk...
     if (iker == 1) {
@@ -174,7 +174,7 @@ function ikerGomb() {
         nav.style.display = 'grid';
         nyilBal.style.display = 'block'
         nyilJobb.style.display = 'none';
-        
+
         if (iker1oldal.style.height == '100%') {
             iker1oldal.style.alignContent = 'start';
             document.querySelector('main p').style.display = "block";
@@ -241,6 +241,7 @@ const maxSzel899 = window.matchMedia("(max-width: 899px)");
 const maxSzel1199 = window.matchMedia("(max-width: 1199px)");
 const maxSzel1799 = window.matchMedia("(max-width: 1799px)");
 const minSzel1800 = window.matchMedia("(min-width: 1800px)");
+
 
 //600px alatti változások
 if (maxSzel599.matches) {
@@ -493,7 +494,7 @@ for (let i = 0; i < tananyagLink.length; i++) {
             document.querySelector('.iker-1 .' + name + '-page').style.display = 'grid';
         } else {
             document.querySelector('.iker-2 .' + name + '-page').style.display = 'grid';
-        }        
+        }
     });
 }
 //Feladatok rész

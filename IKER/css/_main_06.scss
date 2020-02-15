@@ -1,4 +1,15 @@
 //Tananyag oldal IKER-2
 .main_06 {
-    
+
+    .ora_01-page {
+
+        p {
+            &:nth-child(20) {
+                margin-bottom: 4rem;
+            }
+        }
+        ol {
+            margin-bottom: 0;
+        }
+    }    
 }
